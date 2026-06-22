@@ -1,0 +1,163 @@
+# .gitignore - Ludo Ultra 3D Website
+
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.env.local
+.env.*.local
+
+# IDE and Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.sublime-project
+.sublime-workspace
+*.code-workspace
+.nova/
+
+# Node.js / npm
+node_modules/
+package-lock.json
+npm-debug.log
+yarn-error.log
+.npm
+dist/
+build/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv
+.env
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temporary Files
+*.tmp
+*.bak
+*.swp
+*.swo
+*~
+.cache
+.temp
+temp/
+
+# Build/Distribution Files
+dist/
+build/
+*.min.js
+*.min.css
+*.min.html
+
+# Media Files (Too Large - Add Locally)
+# Uncomment if using version control for media
+# assets/videos/*.mp4
+# assets/videos/*.webm
+# assets/images/*.psd
+# assets/images/*.ai
+
+# Configuration Files (Keep Local)
+.env
+.env.local
+config.local.js
+secrets.json
+
+# OS Generated Files
+.AppleDouble
+.LSOverride
+.TemporaryItems
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Windows
+Desktop.ini
+$RECYCLE.BIN/
+
+# Analytics / Tracking (Keep Private)
+analytics-backup.json
+tracking-data.json
+
+# Backup Files
+*.backup
+*.bak
+*.old
+backup/
+*.zip
+*.rar
+*.7z
+
+# Documentation
+.docs-private/
+private-notes/
+
+# Database Files
+*.db
+*.sqlite
+*.sqlite3
+
+# Large Assets (if using git-lfs)
+*.psd
+*.ai
+*.sketch
+*.xd
+*.fig
+
+# Dependencies Locks (Usually committed, but optional)
+# yarn.lock
+# package-lock.json
+
+# Test Coverage
+coverage/
+.nyc_output/
+
+# SSL Certificates (Keep Private!)
+*.pem
+*.key
+*.crt
+*.cert
+
+# API Keys (Keep Private!)
+.credentials
+.secrets
+api-keys.json
+
+# Local Development
+local.config.js
+dev-settings.json
+local-*.json
+
+# CI/CD
+.github/workflows/secrets
+.gitlab-ci.secrets
+
+# Keep these files committed:
+# !.gitkeep
+# !.gitignore
+# !README.md
+# !index.html
+# !styles.css
+# !script.js
+
+# Asset placeholders (small)
+# !assets/images/.gitkeep
+# !assets/videos/.gitkeep
+# !assets/gifs/.gitkeep
