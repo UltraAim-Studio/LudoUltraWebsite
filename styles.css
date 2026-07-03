@@ -1409,6 +1409,84 @@ body::before {
     box-shadow: 10px 10px 0 var(--black-outline), 0 0 30px rgba(255, 63, 180, 0.62), inset 0 3px 0 rgba(255, 255, 255, 0.42);
 }
 
+/* Game content assets */
+.feature-icon,
+.mode-icon,
+.board-image,
+.character-image,
+.token-icon {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 1rem;
+    font-size: 0;
+    background-image: var(--asset);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.board-image {
+    width: min(100%, 180px);
+    height: 140px;
+}
+
+.character-image,
+.token-icon {
+    width: 88px;
+    height: 88px;
+}
+
+.gallery-image {
+    font-size: 0;
+    background-image: var(--asset);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    padding: 1rem;
+}
+
+.feature-card:nth-child(1) .feature-icon { --asset: url("assets/images/Game%20Modes%20Icons/GameModesIcons%20-%20Ludo%20Ultra%203D.png"); }
+.feature-card:nth-child(2) .feature-icon { --asset: url("assets/images/Game%20Modes%20Icons/GameModesIcons%20-%20Classic%20Ludo.png"); }
+.feature-card:nth-child(3) .feature-icon { --asset: url("assets/images/Game%20Modes%20Icons/GameModesIcons%20-%20Rank%20Match.png"); }
+.feature-card:nth-child(4) .feature-icon { --asset: url("assets/images/Game%20Modes%20Icons/GameModesIcons%20-%20Quick%20Match.png"); }
+.feature-card:nth-child(5) .feature-icon { --asset: url("assets/images/Character%20Item%20Icons/Hat%20icon.png"); }
+.feature-card:nth-child(6) .feature-icon { --asset: url("assets/images/TokenActions/Icon_TokenActions_Fire_Ball.png"); }
+.feature-card:nth-child(7) .feature-icon { --asset: url("assets/images/Game%20Modes%20Icons/GameModesIcons%20-%20Rank%20Match.png"); }
+.feature-card:nth-child(8) .feature-icon { --asset: url("assets/images/TokenFunActions/Icon_TokenFunActions_Dice.png"); }
+
+.mode-card:nth-child(1) .mode-icon { --asset: url("assets/images/Game%20Modes%20Icons/GameModesIcons%20-%20Quick%20Match.png"); }
+.mode-card:nth-child(2) .mode-icon { --asset: url("assets/images/Game%20Modes%20Icons/GameModesIcons%20-%20Classic%20Ludo.png"); }
+.mode-card:nth-child(3) .mode-icon { --asset: url("assets/images/Game%20Modes%20Icons/GameModesIcons%20-%20Ludo%20Ultra%203D.png"); }
+.mode-card:nth-child(4) .mode-icon { --asset: url("assets/images/Game%20Modes%20Icons/GameModesIcons%20-%20Classic%20Ludo.png"); }
+.mode-card:nth-child(5) .mode-icon { --asset: url("assets/images/Game%20Modes%20Icons/GameModesIcons%20-%20Rank%20Match.png"); }
+.mode-card:nth-child(6) .mode-icon { --asset: url("assets/images/Game%20Modes%20Icons/GameModesIcons%20-%20Quick%20Match.png"); }
+
+.board-card:nth-child(1) .board-image { --asset: url("assets/images/Icon_Board/Icon_Model_LudoBoard%200%20Default.png"); }
+.board-card:nth-child(2) .board-image { --asset: url("assets/images/Icon_Board/Icon_Model_LudoBoard%202%20Ice.png"); }
+.board-card:nth-child(3) .board-image { --asset: url("assets/images/Icon_Board/Icon_Model_LudoBoard%203%20Wooden.png"); }
+.board-card:nth-child(4) .board-image { --asset: url("assets/images/Icon_Board/Icon_Model_LudoBoard%206%20Scifi.png"); }
+
+.character-card:nth-child(1) .character-image { --asset: url("assets/images/Character%20Item%20Icons/Hat%20icon.png"); }
+.character-card:nth-child(2) .character-image { --asset: url("assets/images/Character%20Item%20Icons/Hairstyle%20icon.png"); }
+.character-card:nth-child(3) .character-image { --asset: url("assets/images/Character%20Item%20Icons/Glasses%20icon.png"); }
+.character-card:nth-child(4) .character-image { --asset: url("assets/images/Character%20Item%20Icons/Gloves%20icon.png"); }
+.character-card:nth-child(5) .character-image { --asset: url("assets/images/Character%20Item%20Icons/Outwear%20icon.png"); }
+.character-card:nth-child(6) .character-image { --asset: url("assets/images/Character%20Item%20Icons/Shoes%20icon.png"); }
+
+.token-item:nth-child(1) .token-icon { --asset: url("assets/images/TokenFunActions/Icon_TokenFunActions_Banana.png"); }
+.token-item:nth-child(2) .token-icon { --asset: url("assets/images/TokenFunActions/Icon_TokenFunActions_Snowball.png"); }
+.token-item:nth-child(3) .token-icon { --asset: url("assets/images/TokenFunActions/Icon_TokenFunActions_Dice.png"); }
+.token-item:nth-child(4) .token-icon { --asset: url("assets/images/TokenFunActions/Icon_TokenFunActions_Heart.png"); }
+.token-item:nth-child(5) .token-icon { --asset: url("assets/images/TokenActions/Icon_TokenActions_Fire_Ball.png"); }
+.token-item:nth-child(6) .token-icon { --asset: url("assets/images/TokenActions/Icon_TokenActions_Rock_Throw.png"); }
+
+.gallery-item:nth-child(1) .gallery-image { --asset: url("assets/images/Icon_Environment/Icon_Model_Environment%201%20Pillar.png"); }
+.gallery-item:nth-child(2) .gallery-image { --asset: url("assets/images/Icon_Environment/Icon_Model_Environment%202%20christmas%20village.png"); }
+.gallery-item:nth-child(3) .gallery-image { --asset: url("assets/images/Icon_Environment/Icon_Model_Environment%203%20city%20bulding.png"); }
+.gallery-item:nth-child(4) .gallery-image { --asset: url("assets/images/Icon_Environment/Icon_Model_Environment%204%20soccer%20field.png"); }
+.gallery-item:nth-child(5) .gallery-image { --asset: url("assets/images/Icon_Board/Icon_Model_LudoBoard%208%20Octagon.png"); }
+.gallery-item:nth-child(6) .gallery-image { --asset: url("assets/images/Icon_Board/Icon_Model_LudoBoard%209%20Octagon%20Black.png"); }
+
 .hero-ctas .cta-primary,
 .hero-ctas .cta-secondary,
 .gallery-item p,
