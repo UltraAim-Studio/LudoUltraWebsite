@@ -161,3 +161,7 @@ local-*.json
 # !assets/images/.gitkeep
 # !assets/videos/.gitkeep
 # !assets/gifs/.gitkeep
+AI Agent Prompt.text
+CONFIG.md
+CUSTOMIZATION.md
+*.md

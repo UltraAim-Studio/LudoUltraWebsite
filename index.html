@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ludo Ultra 3D - The classic Ludo experience, reimagined in a stunning 3D world. Play online with friends, challenge the computer, and dominate the leaderboard!">
+    <meta name="theme-color" content="#1a1f3a">
+    <title>Ludo Ultra 3D - Play the Ultimate 3D Ludo Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img class="logo-img" src="assets/images/Ludo%20Icon%20v1.png" alt="Ludo Ultra 3D logo">
+                <span class="logo-text">Ludo Ultra 3D</span>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#trailers">Trailers</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#modes">Game Modes</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#download">Download</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-video-container">
+            <video 
+                class="hero-video" 
+                id="heroVideo"
+                autoplay 
+                muted 
+                loop 
+                playsinline
+                poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 1080'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%230d1b3a;stop-opacity:1' /%3E%3Cstop offset='50%25' style='stop-color:%231a2a4a;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23152a52;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23grad)' width='1920' height='1080'/%3E%3C/svg%3E">
+                <source src="assets/videos/LudoUltra%20Trailer%20V1%20-%20Testing.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-inner">
+                <img class="hero-logo" src="assets/images/Ludo%20Icon%20v1.png" alt="Ludo Ultra 3D logo">
+                <h1 class="hero-title">Ludo Ultra 3D</h1>
+                <p class="hero-tagline">Roll the dice. Rule the board.</p>
+                <p class="hero-subtitle">The classic Ludo experience, reimagined in a stunning 3D world.</p>
+                <div class="hero-ctas">
+                    <button class="cta-primary" id="playTrailerBtn">▶ Watch Trailer</button>
+                    <button class="cta-secondary" href="#download">Download Now</button>
+                </div>
+                <p class="hero-feature">🎮 Play Online • 👥 With Friends • 💻 vs Computer</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Trailers Section -->
+    <section class="trailers" id="trailers">
+        <div class="container">
+            <h2 class="section-title">Featured Trailers</h2>
+            
+            <div class="trailers-content">
+                <div class="main-player">
+                    <div class="video-wrapper">
+                        <video 
+                            class="main-video" 
+                            id="mainTrailer"
+                            muted
+                            controls
+                            playsinline
+                            poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 1080'%3E%3Cdefs%3E%3ClinearGradient id='grad2' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23ff006e;stop-opacity:0.3' /%3E%3Cstop offset='100%25' style='stop-color:%238338ec;stop-opacity:0.3' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23grad2)' width='1920' height='1080'/%3E%3Ctext x='50%25' y='50%25' font-size='72' fill='white' text-anchor='middle' dominant-baseline='middle' font-family='Arial' font-weight='bold'%3E▶ Video Coming Soon%3C/text%3E%3C/svg%3E">
+                            <source src="assets/videos/LudoUltra%20Trailer%20V1%20-%20Testing.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="portrait-trailer-card">
+                        <video
+                            class="portrait-trailer-video"
+                            id="portraitTrailer"
+                            muted
+                            loop
+                            playsinline
+                            controls>
+                            <source src="assets/videos/LudoUltra%20Trailer%20-%20Background%20-%2025%20may_01.mp4" type="video/mp4">
+                        </video>
+                        <div class="portrait-trailer-copy">
+                            <h3>Mobile Trailer</h3>
+                            <p>Portrait preview for reels, shorts, and phone-first gameplay.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="trailer-thumbnails">
+                    <button class="thumbnail active" data-trailer="main">
+                        <div class="thumb-icon">🎬</div>
+                        <span>Main Trailer</span>
+                    </button>
+                    <button class="thumbnail" data-trailer="gameplay">
+                        <div class="thumb-icon">🎮</div>
+                        <span>Gameplay</span>
+                    </button>
+                    <button class="thumbnail" data-trailer="portrait">
+                        <div class="thumb-icon">Mobile</div>
+                        <span>Mobile Preview</span>
+                    </button>
+                    <button class="thumbnail" data-trailer="multiplayer">
+                        <div class="thumb-icon">👥</div>
+                        <span>Multiplayer</span>
+                    </button>
+                    <button class="thumbnail" data-trailer="characters">
+                        <div class="thumb-icon">🎭</div>
+                        <span>Characters</span>
+                    </button>
+                    <button class="thumbnail" data-trailer="tokens">
+                        <div class="thumb-icon">✨</div>
+                        <span>Token Actions</span>
+                    </button>
+                    <button class="thumbnail" data-trailer="boards">
+                        <div class="thumb-icon">🌍</div>
+                        <span>Board Themes</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Game Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">Amazing Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h3>Online Multiplayer</h3>
+                    <p>Play with players around the world in real-time matches</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👥</div>
+                    <h3>Play with Friends</h3>
+                    <p>Challenge your friends and dominate the board together</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>Play vs Computer</h3>
+                    <p>Test your skills against intelligent AI opponents</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Pass & Play</h3>
+                    <p>Local multiplayer mode perfect for family fun</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Character Customization</h3>
+                    <p>Personalize your pieces with unique character designs</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Token Actions</h3>
+                    <p>Unlock special powers to turn the game around</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏆</div>
+                    <h3>Leaderboard</h3>
+                    <p>Climb the ranks and prove you're the ultimate Ludo master</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎁</div>
+                    <h3>Rewards & Quests</h3>
+                    <p>Earn rewards by completing daily quests and challenges</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Game Modes Section -->
+    <section class="modes" id="modes">
+        <div class="container">
+            <h2 class="section-title">Game Modes</h2>
+            <div class="modes-grid">
+                <div class="mode-card">
+                    <div class="mode-icon">⚡</div>
+                    <h3>Quick Match</h3>
+                    <p>Jump into instant action with random opponents</p>
+                </div>
+                <div class="mode-card">
+                    <div class="mode-icon">🔐</div>
+                    <h3>Private Room</h3>
+                    <p>Create your own room with custom settings</p>
+                </div>
+                <div class="mode-card">
+                    <div class="mode-icon">🔗</div>
+                    <h3>Join Room</h3>
+                    <p>Enter friends' rooms using a room code</p>
+                </div>
+                <div class="mode-card">
+                    <div class="mode-icon">👫</div>
+                    <h3>Play with Friends</h3>
+                    <p>Challenge specific friends from your contacts</p>
+                </div>
+                <div class="mode-card">
+                    <div class="mode-icon">🤖</div>
+                    <h3>Play with Computer</h3>
+                    <p>Sharpen your skills against AI opponents</p>
+                </div>
+                <div class="mode-card">
+                    <div class="mode-icon">📱</div>
+                    <h3>Pass & Play</h3>
+                    <p>Play locally by passing the device between players</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Board Themes Section -->
+    <section class="boards" id="boards">
+        <div class="container">
+            <h2 class="section-title">Board Themes</h2>
+            <div class="boards-grid">
+                <div class="board-card">
+                    <div class="board-image">🌲</div>
+                    <h3>Forest Theme</h3>
+                    <p>Immerse yourself in nature's beauty with lush green aesthetics</p>
+                </div>
+                <div class="board-card">
+                    <div class="board-image">🏖️</div>
+                    <h3>Sunny Beach</h3>
+                    <p>Relax and play under the tropical sun with vibrant beach vibes</p>
+                </div>
+                <div class="board-card">
+                    <div class="board-image">☁️</div>
+                    <h3>Sky World</h3>
+                    <p>Soar through the clouds in this celestial gaming paradise</p>
+                </div>
+                <div class="board-card">
+                    <div class="board-image">🚀</div>
+                    <h3>Future Tech</h3>
+                    <p>Experience gaming in a futuristic high-tech environment</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Character Showcase Section -->
+    <section class="characters" id="characters">
+        <div class="container">
+            <h2 class="section-title">Character Showcase</h2>
+            <div class="characters-gallery">
+                <div class="character-card">
+                    <div class="character-image">🧙</div>
+                    <h3>Wizard</h3>
+                    <p>Mystical and powerful, with magical abilities</p>
+                </div>
+                <div class="character-card">
+                    <div class="character-image">🦸</div>
+                    <h3>Hero</h3>
+                    <p>Bold and fearless, ready to conquer any challenge</p>
+                </div>
+                <div class="character-card">
+                    <div class="character-image">🧛</div>
+                    <h3>Vampire</h3>
+                    <p>Dark and mysterious with supernatural charm</p>
+                </div>
+                <div class="character-card">
+                    <div class="character-image">🤡</div>
+                    <h3>Jester</h3>
+                    <p>Playful and unpredictable, keeping things fun</p>
+                </div>
+                <div class="character-card">
+                    <div class="character-image">🐉</div>
+                    <h3>Dragon</h3>
+                    <p>Legendary and majestic, master of all terrains</p>
+                </div>
+                <div class="character-card">
+                    <div class="character-image">🧚</div>
+                    <h3>Fairy</h3>
+                    <p>Magical and graceful, brings good fortune</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Token Actions Section -->
+    <section class="tokens" id="tokens">
+        <div class="container">
+            <h2 class="section-title">Token Actions</h2>
+            <p class="section-subtitle">Unlock special powers to change the game</p>
+            <div class="tokens-grid">
+                <div class="token-item">
+                    <div class="token-icon">🍌</div>
+                    <h4>Banana</h4>
+                    <p>Slip past obstacles with speed</p>
+                </div>
+                <div class="token-item">
+                    <div class="token-icon">❄️</div>
+                    <h4>Snowball</h4>
+                    <p>Freeze opponents temporarily</p>
+                </div>
+                <div class="token-item">
+                    <div class="token-icon">🎂</div>
+                    <h4>Cake</h4>
+                    <p>Gain extra moves and bonuses</p>
+                </div>
+                <div class="token-item">
+                    <div class="token-icon">❤️</div>
+                    <h4>Heart</h4>
+                    <p>Heal and protect your pieces</p>
+                </div>
+                <div class="token-item">
+                    <div class="token-icon">🔥</div>
+                    <h4>Fireball</h4>
+                    <p>Blast through the board with power</p>
+                </div>
+                <div class="token-item">
+                    <div class="token-icon">🪨</div>
+                    <h4>Rock</h4>
+                    <p>Crush down barriers and blocks</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <h2 class="section-title">Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="gallery-image">📸</div>
+                    <p>Gameplay Screenshot 1</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-image">📸</div>
+                    <p>Gameplay Screenshot 2</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-image">📸</div>
+                    <p>UI Design</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-image">📸</div>
+                    <p>Character Selection</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-image">📸</div>
+                    <p>Board Theme</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-image">📸</div>
+                    <p>Multiplayer Match</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section class="social" id="social">
+        <div class="container">
+            <h2 class="section-title">Join Our Community</h2>
+            <p class="section-subtitle">Follow us on your favorite platforms</p>
+            <div class="social-grid">
+                <a href="#" class="social-card" target="_blank">
+                    <div class="social-icon">▶️</div>
+                    <h3>YouTube</h3>
+                    <p>Watch tutorials and highlights</p>
+                    <span class="social-btn">Subscribe</span>
+                </a>
+                <a href="#" class="social-card" target="_blank">
+                    <div class="social-icon">📷</div>
+                    <h3>Instagram</h3>
+                    <p>Daily updates and behind-the-scenes</p>
+                    <span class="social-btn">Follow</span>
+                </a>
+                <a href="#" class="social-card" target="_blank">
+                    <div class="social-icon">💬</div>
+                    <h3>Discord</h3>
+                    <p>Join our gaming community</p>
+                    <span class="social-btn">Join</span>
+                </a>
+                <a href="#" class="social-card" target="_blank">
+                    <div class="social-icon">𝕏</div>
+                    <h3>X / Twitter</h3>
+                    <p>Latest news and announcements</p>
+                    <span class="social-btn">Follow</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>How do I play with friends?</h3>
+                    <p>Create a private room, share the room code with your friends, and they can join instantly. You can also challenge specific friends from your contact list.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Is internet required?</h3>
+                    <p>Internet is required for online multiplayer modes. However, you can play locally using the Pass & Play mode without an internet connection.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can I play against the computer?</h3>
+                    <p>Yes! We offer AI opponents with adjustable difficulty levels. Play as many games as you want to hone your skills.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How do I customize my characters?</h3>
+                    <p>Visit the character customization section in your profile. Unlock new characters through gameplay, achievements, and the in-game store.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Is the game free?</h3>
+                    <p>Yes! Ludo Ultra 3D is completely free to play with optional in-game purchases for cosmetics and battle pass items.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Where can I report issues?</h3>
+                    <p>Contact our support team through the in-game help menu or email us at support@ludoultra3d.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download / CTA Section -->
+    <section class="download" id="download">
+        <div class="container">
+            <h2 class="section-title">Ready to Play?</h2>
+            <p class="section-subtitle">Download Ludo Ultra 3D today and join millions of players</p>
+            <div class="download-buttons">
+                <a href="#" class="download-btn app-store">
+                    <span class="store-icon">🍎</span>
+                    <div>
+                        <small>Download on</small>
+                        <strong>App Store</strong>
+                    </div>
+                </a>
+                <a href="#" class="download-btn google-play">
+                    <span class="store-icon">🤖</span>
+                    <div>
+                        <small>Get it on</small>
+                        <strong>Google Play</strong>
+                    </div>
+                </a>
+            </div>
+            <p class="coming-soon">Coming soon on Windows and Web</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🎲 Ludo Ultra 3D</h3>
+                    <p>Experience the ultimate 3D Ludo game with friends worldwide. Roll the dice. Rule the board.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#trailers">Trailers</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#modes">Game Modes</a></li>
+                        <li><a href="#download">Download</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Account Deletion</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: <a href="mailto:support@ludoultra3d.com">support@ludoultra3d.com</a></p>
+                    <div class="social-links">
+                        <a href="#" title="YouTube">▶️</a>
+                        <a href="#" title="Instagram">📷</a>
+                        <a href="#" title="Discord">💬</a>
+                        <a href="#" title="X">𝕏</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Ludo Ultra 3D. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
