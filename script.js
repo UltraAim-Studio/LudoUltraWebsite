@@ -12,8 +12,19 @@ const portraitTrailer = document.getElementById('portraitTrailer');
 const thumbnails = document.querySelectorAll('.thumbnail');
 const mainPlayer = document.querySelector('.main-player');
 
-const landscapeTrailerSrc = 'assets/videos/LudoUltra%20Trailer%20V1%20-%20Testing.mp4';
-const portraitTrailerSrc = 'assets/videos/LudoUltra%20Trailer%20-%20Background%20-%2025%20may_01.mp4';
+const videoBasePath = 'assets/videos/';
+const landscapeTrailerSrc = `${videoBasePath}Ludo Ultra 3D Landscape Simple Trailer v3 - 720p.mp4`;
+const landscapeFullTrailerSrc = `${videoBasePath}Ludo Ultra 3D Landscape Simple Trailer v3.mp4`;
+const captureActionSrc = `${videoBasePath}Ludo Ultra Capture Action.mp4`;
+const captureActionTwoSrc = `${videoBasePath}Ludo Ultra Capture Action 2.mp4`;
+const characterCustomizationSrc = `${videoBasePath}Ludo Ultra Character Customization.mp4`;
+const diceRollSrc = `${videoBasePath}Ludo Ultra Dice Role.mp4`;
+const funActionSrc = `${videoBasePath}Ludo Ultra Fun Action.mp4`;
+const getHomeSrc = `${videoBasePath}Ludo Ultra Get Home.mp4`;
+const jumpActionSrc = `${videoBasePath}Ludo Ultra Jump Action.mp4`;
+const overviewSrc = `${videoBasePath}Ludo Ultra Overview.mp4`;
+const winnerSrc = `${videoBasePath}Ludo Ultra Winner.mp4`;
+const portraitTrailerSrc = `${videoBasePath}LudoUltra Trailer - Background - 25 may_01.mp4`;
 
 // ============================================
 // MOBILE MENU TOGGLE
@@ -63,10 +74,10 @@ const trailerData = {
         orientation: 'landscape'
     },
     gameplay: {
-        title: 'Gameplay Trailer',
-        description: 'See intense gameplay and epic moments',
-        src: landscapeTrailerSrc,
-        orientation: 'landscape'
+        title: 'Capture Action',
+        description: 'See capture moments and board action',
+        src: captureActionSrc,
+        orientation: 'portrait'
     },
     portrait: {
         title: 'Mobile Trailer',
@@ -75,34 +86,64 @@ const trailerData = {
         orientation: 'portrait'
     },
     multiplayer: {
-        title: 'Multiplayer Trailer',
-        description: 'Play with friends from around the world',
-        src: landscapeTrailerSrc,
-        orientation: 'landscape'
+        title: 'Overview Trailer',
+        description: 'A broad look at the full Ludo Ultra 3D experience',
+        src: overviewSrc,
+        orientation: 'portrait'
     },
     characters: {
-        title: 'Character Trailer',
-        description: 'Meet the amazing characters',
-        src: landscapeTrailerSrc,
-        orientation: 'landscape'
+        title: 'Character Customization',
+        description: 'Preview character styling and customization',
+        src: characterCustomizationSrc,
+        orientation: 'portrait'
     },
     tokens: {
-        title: 'Token Actions Trailer',
-        description: 'Unleash special powers and abilities',
-        src: landscapeTrailerSrc,
-        orientation: 'landscape'
+        title: 'Fun Action',
+        description: 'See playful token actions in motion',
+        src: funActionSrc,
+        orientation: 'portrait'
     },
     boards: {
-        title: 'Board Themes Trailer',
-        description: 'Explore stunning board environments',
-        src: landscapeTrailerSrc,
+        title: 'Landscape Full Trailer',
+        description: 'High quality landscape trailer version',
+        src: landscapeFullTrailerSrc,
         orientation: 'landscape'
+    },
+    dice: {
+        title: 'Dice Roll',
+        description: 'Watch the dice roll action',
+        src: diceRollSrc,
+        orientation: 'portrait'
+    },
+    jump: {
+        title: 'Jump Action',
+        description: 'Token jump movement preview',
+        src: jumpActionSrc,
+        orientation: 'portrait'
+    },
+    capture2: {
+        title: 'Capture Action 2',
+        description: 'More capture action gameplay moments',
+        src: captureActionTwoSrc,
+        orientation: 'portrait'
+    },
+    home: {
+        title: 'Get Home',
+        description: 'Token home stretch and finish moments',
+        src: getHomeSrc,
+        orientation: 'portrait'
+    },
+    winner: {
+        title: 'Winner',
+        description: 'Victory and winning celebration preview',
+        src: winnerSrc,
+        orientation: 'portrait'
     }
 };
 
 function loadTrailer(video, src) {
-    const currentSrc = video.currentSrc || video.querySelector('source')?.getAttribute('src');
-    if (currentSrc && currentSrc.includes(src)) {
+    const currentSrc = decodeURI(video.currentSrc || video.querySelector('source')?.getAttribute('src') || '');
+    if (currentSrc.endsWith(src)) {
         return;
     }
 

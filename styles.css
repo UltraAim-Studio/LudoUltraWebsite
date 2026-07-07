@@ -487,6 +487,13 @@ li,
     font-size: 1.5rem;
 }
 
+.thumb-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
 .thumbnail:hover {
     background: rgba(0, 212, 255, 0.1);
     border-color: var(--accent-blue);
@@ -1441,8 +1448,12 @@ body::before {
     background-image: var(--asset);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     padding: 1rem;
+}
+
+.gallery-item {
+    aspect-ratio: 9 / 16;
 }
 
 .feature-card:nth-child(1) .feature-icon { --asset: url("assets/images/Game%20Modes%20Icons/GameModesIcons%20-%20Ludo%20Ultra%203D.png"); }
@@ -1480,12 +1491,12 @@ body::before {
 .token-item:nth-child(5) .token-icon { --asset: url("assets/images/TokenActions/Icon_TokenActions_Fire_Ball.png"); }
 .token-item:nth-child(6) .token-icon { --asset: url("assets/images/TokenActions/Icon_TokenActions_Rock_Throw.png"); }
 
-.gallery-item:nth-child(1) .gallery-image { --asset: url("assets/images/Icon_Environment/Icon_Model_Environment%201%20Pillar.png"); }
-.gallery-item:nth-child(2) .gallery-image { --asset: url("assets/images/Icon_Environment/Icon_Model_Environment%202%20christmas%20village.png"); }
-.gallery-item:nth-child(3) .gallery-image { --asset: url("assets/images/Icon_Environment/Icon_Model_Environment%203%20city%20bulding.png"); }
-.gallery-item:nth-child(4) .gallery-image { --asset: url("assets/images/Icon_Environment/Icon_Model_Environment%204%20soccer%20field.png"); }
-.gallery-item:nth-child(5) .gallery-image { --asset: url("assets/images/Icon_Board/Icon_Model_LudoBoard%208%20Octagon.png"); }
-.gallery-item:nth-child(6) .gallery-image { --asset: url("assets/images/Icon_Board/Icon_Model_LudoBoard%209%20Octagon%20Black.png"); }
+.gallery-item:nth-child(1) .gallery-image { --asset: url("assets/images/Screenshots/Ludo%20Ultra%203D%20Phone%20Screenshots%202.jpg"); }
+.gallery-item:nth-child(2) .gallery-image { --asset: url("assets/images/Screenshots/Ludo%20Ultra%203D%20Phone%20Screenshots%203.jpg"); }
+.gallery-item:nth-child(3) .gallery-image { --asset: url("assets/images/Screenshots/Ludo%20Ultra%203D%20Phone%20Screenshots%204.jpg"); }
+.gallery-item:nth-child(4) .gallery-image { --asset: url("assets/images/Screenshots/Ludo%20Ultra%203D%20Phone%20Screenshots%205.jpg"); }
+.gallery-item:nth-child(5) .gallery-image { --asset: url("assets/images/Screenshots/Ludo%20Ultra%203D%20Phone%20Screenshots%206.jpg"); }
+.gallery-item:nth-child(6) .gallery-image { --asset: url("assets/images/Screenshots/Ludo%20Ultra%203D%20Phone%20Screenshots%207.jpg"); }
 
 .hero-ctas .cta-primary,
 .hero-ctas .cta-secondary,
