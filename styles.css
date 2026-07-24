@@ -5,7 +5,7 @@
 @font-face {
     font-family: 'Lilita One';
     src: url('assets/Fonts/Lilita_One/LilitaOne-Regular.ttf') format('truetype');
-    font-weight: 400;
+    font-weight: 100;
     font-style: normal;
     font-display: swap;
 }
@@ -16,11 +16,13 @@
     padding: 0;
     box-sizing: border-box;
     font-family: inherit;
+    font-weight: 100;
 }
 
 *::before,
 *::after {
     font-family: inherit;
+    font-weight: inherit;
 }
 
 html {
@@ -40,11 +42,21 @@ body {
     min-height: 100vh;
 }
 
+body,
+body * {
+    font-weight: 100;
+}
+
 button,
 input,
 textarea,
 select {
     font: inherit;
+}
+
+strong,
+b {
+    font-weight: 100;
 }
 
 /* ============================================
@@ -68,7 +80,7 @@ select {
     --cartoon-lime: #6dff70;
     --cartoon-sky: #21d4ff;
     --cartoon-violet: #9b5cff;
-    --glass-shine: linear-gradient(145deg, rgba(255, 255, 255, 0.34) 0%, rgba(255, 255, 255, 0.13) 38%, rgba(255, 255, 255, 0.05) 100%);
+    --glass-shine: linear-gradient(0deg, rgb(0 0 0 / 29%) 0%, rgb(255 255 255 / 6%) 38%, rgb(0 0 0 / 43%) 100%);
     --outside-outline: drop-shadow(1px 0 0 var(--black-outline)) drop-shadow(-1px 0 0 var(--black-outline)) drop-shadow(0 1px 0 var(--black-outline)) drop-shadow(0 -1px 0 var(--black-outline));
     --outside-outline-lg: drop-shadow(2px 0 0 var(--black-outline)) drop-shadow(-2px 0 0 var(--black-outline)) drop-shadow(0 2px 0 var(--black-outline)) drop-shadow(0 -2px 0 var(--black-outline));
     --hard-shadow: drop-shadow(0 5px 0 var(--black-outline));
@@ -84,6 +96,15 @@ select {
 /* ============================================
    UTILITIES & HELPERS
    ============================================ */
+.light-heading h1,
+.light-heading h2,
+.light-heading h3,
+.light-heading h4,
+.light-heading h5,
+.light-heading h6 {
+    font-weight: 100 !important;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -98,7 +119,7 @@ select {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    font-weight: 800;
+    /* font-weight: 800; */
     letter-spacing: 2px;
     animation: fadeInDown 0.8s ease;
     filter: var(--hard-text-filter) drop-shadow(0 0 20px rgba(0, 212, 255, 0.35));
@@ -121,14 +142,25 @@ h4,
 .hero-tagline,
 .hero-feature,
 .download-btn strong,
-.social-btn {
+.social-btn,
+p,
+small,
+li,
+.placeholder-text,
+a,
+span,
+button {
+    font-weight: 100 !important;
     filter: var(--hard-text-filter-sm);
 }
 
 p,
 small,
 li,
-.placeholder-text {
+.placeholder-text,
+a,
+span,
+button {
     filter: var(--hard-text-filter-xs);
 }
 
@@ -172,9 +204,9 @@ li,
 }
 
 .logo-text {
-    font-size: 1.5rem;
-    font-weight: 800;
-    background: linear-gradient(135deg, #ff006e, #8338ec);
+    font-size: 1.7rem;
+    /* font-weight: 800; */
+    background: linear-gradient(142deg, #f30900 10%, #fdfe3b 40%, #48f92a 56%, #006bfd 95%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -190,7 +222,7 @@ li,
 .nav-links a {
     color: var(--text-light);
     text-decoration: none;
-    font-weight: 600;
+    /* font-weight: 600; */
     transition: all 0.3s ease;
     position: relative;
 }
@@ -295,7 +327,7 @@ li,
 
 .hero-title {
     font-size: clamp(2.5rem, 8vw, 5rem);
-    font-weight: 900;
+    /* font-weight: 900; */
     margin-bottom: 1rem;
     background: linear-gradient(135deg, #00d4ff, #ff006e, #00ff88, #ffd60a);
     -webkit-background-clip: text;
@@ -307,7 +339,7 @@ li,
 
 .hero-tagline {
     font-size: clamp(1.2rem, 3vw, 2rem);
-    font-weight: 700;
+    /* font-weight: 700; */
     color: var(--accent-blue);
     margin-bottom: 0.5rem;
     letter-spacing: 2px;
@@ -334,7 +366,7 @@ li,
 .cta-secondary {
     padding: 1rem 2.5rem;
     font-size: 1.1rem;
-    font-weight: 700;
+    /* font-weight: 700; */
     border: none;
     border-radius: 50px;
     cursor: pointer;
@@ -371,7 +403,7 @@ li,
 .hero-feature {
     font-size: 1.1rem;
     color: var(--text-light);
-    font-weight: 600;
+    /* font-weight: 600; */
     letter-spacing: 1px;
 }
 
@@ -480,7 +512,6 @@ li,
     display: flex;
     align-items: center;
     gap: 1rem;
-    font-weight: 600;
 }
 
 .thumb-icon {
@@ -802,7 +833,7 @@ li,
     padding: 0.5rem;
     text-align: center;
     font-size: 0.9rem;
-    font-weight: 600;
+    /* font-weight: 600; */
 }
 
 /* ============================================
@@ -862,7 +893,7 @@ li,
     background: linear-gradient(135deg, var(--accent-red), var(--accent-purple));
     color: white;
     border-radius: 20px;
-    font-weight: 600;
+    /* font-weight: 600; */
     transition: all 0.3s ease;
 }
 
@@ -937,7 +968,7 @@ li,
     text-decoration: none;
     transition: all 0.3s ease;
     cursor: pointer;
-    font-weight: 600;
+    /* font-weight: 600; */
 }
 
 .store-icon {
@@ -1083,6 +1114,7 @@ body::before {
 .nav-links a {
     padding: 0.45rem 0.75rem;
     border-radius: 999px;
+    font-size: 1.2rem;
 }
 
 .nav-links a:hover {
@@ -1106,7 +1138,7 @@ body::before {
 }
 
 .hero-title {
-    background: linear-gradient(180deg, #fff799 0%, #ffdd2d 28%, #ff3fb4 56%, #21d4ff 82%, #6dff70 100%);
+    background: linear-gradient(142deg, #f30900 10%, #fdfe3b 40%, #48f92a 56%, #006bfd 95%);
     -webkit-background-clip: text;
     background-clip: text;
 }
@@ -1297,7 +1329,7 @@ body::before {
     background: linear-gradient(135deg, rgba(255, 63, 180, 0.88), rgba(33, 212, 255, 0.82));
     color: #ffffff;
     font-family: inherit;
-    font-weight: 800;
+    /* font-weight: 800; */
     letter-spacing: 1px;
     filter: var(--hard-text-filter-sm);
 }
@@ -1504,7 +1536,7 @@ body::before {
 .social-card .social-btn {
     color: #ffffff;
     font-family: inherit;
-    font-weight: 800;
+    /* font-weight: 800; */
     letter-spacing: 1px;
     text-shadow: var(--game-text-border);
 }
