@@ -174,6 +174,114 @@ thumbnails.forEach(thumbnail => {
 });
 
 // ============================================
+// DETAIL CARD VIEW
+// ============================================
+const detailModal = document.getElementById('detailModal');
+const detailMedia = document.getElementById('detailMedia');
+const detailCategory = document.getElementById('detailCategory');
+const detailTitle = document.getElementById('detailTitle');
+const detailDescription = document.getElementById('detailDescription');
+
+const detailDescriptions = {
+    'Online Multiplayer': 'Jump into real-time Ludo matches with players around the world. Built for quick matchmaking, smooth turns, and that satisfying feeling of outplaying friends and rivals on a living 3D board.',
+    'Play with Friends': 'Create friendly matches, invite your circle, and turn every roll into a shared moment. This mode focuses on easy joining, playful competition, and fast rematches.',
+    'Play vs Computer': 'Practice whenever you want against AI opponents. It is ideal for learning routes, testing risky moves, and sharpening your strategy before entering online games.',
+    'Pass & Play': 'A local party mode for family and friends on one device. Pass the device around, roll the dice, and keep the table-game feeling alive.',
+    'Character Customization': 'Personalize your character with playful items, accessories, and style choices that make your board presence feel unique.',
+    'Token Actions': 'Special actions add surprise and personality to each token move. Use them to create dramatic turns, funny moments, and match-changing plays.',
+    'Leaderboard': 'Climb the ranks by winning matches and proving your consistency. Built for players who want bragging rights and long-term progression.',
+    'Rewards & Quests': 'Complete goals, collect rewards, and keep every session feeling fresh with meaningful tasks beyond the main match.',
+    'Quick Match': 'Start playing fast with minimal setup. Quick Match is designed for instant action when you want one more round right now.',
+    'Private Room': 'Create a dedicated room with custom control over who joins. Perfect for friend groups, small tournaments, and planned game nights.',
+    'Join Room': 'Enter a room code and jump directly into a friend-created match. Simple, fast, and made for sharing.',
+    'Play with Computer': 'Train against computer-controlled players and experiment with safer or riskier strategies at your own pace.',
+    'Forest Theme': 'A lush board presentation that gives matches a bright, adventurous personality with a nature-inspired mood.',
+    'Sunny Beach': 'A sunny, vacation-style board atmosphere that keeps the game colorful, warm, and playful.',
+    'Sky World': 'A dreamy board theme with a light, elevated feel for matches that should look magical and energetic.',
+    'Future Tech': 'A futuristic board look for players who enjoy neon polish, clean shapes, and sci-fi energy.',
+    'Wizard': 'A magical character style with a fantasy vibe, made for players who want their piece to feel mysterious and powerful.',
+    'Hero': 'A bold character style for players who like confident, adventurous looks on the board.',
+    'Vampire': 'A darker character personality with a stylish, supernatural edge.',
+    'Jester': 'A playful character option for players who enjoy expressive and unpredictable board energy.',
+    'Dragon': 'A legendary style that makes your presence on the board feel big and dramatic.',
+    'Fairy': 'A graceful character style with a lighter, magical tone.',
+    'Banana': 'A fun token action designed for silly moments and quick turnarounds during a match.',
+    'Snowball': 'A cool action effect that gives moves an icy personality and adds visual variety to token play.',
+    'Cake': 'A cheerful reward-style action that keeps matches playful and celebratory.',
+    'Heart': 'A warm support-style action that adds charm and personality to your token moments.',
+    'Fireball': 'A high-impact action with a dramatic look, perfect for big plays and bold turns.',
+    'Rock': 'A heavy action effect that feels powerful, direct, and satisfying.',
+    'Phone Screenshot 2': 'A phone-sized gameplay screenshot showing how Ludo Ultra 3D looks in a mobile-first view.',
+    'Phone Screenshot 3': 'A close mobile preview of the game experience, shaped for vertical screens and app-store style presentation.',
+    'Phone Screenshot 4': 'A gameplay screenshot focused on the colorful board and readable mobile layout.',
+    'Phone Screenshot 5': 'A vertical showcase image for the game interface, characters, and board presentation.',
+    'Phone Screenshot 6': 'A phone screenshot that highlights the polished mobile look and playful 3D styling.',
+    'Phone Screenshot 7': 'A final mobile showcase frame for gallery browsing and promotional preview.'
+};
+
+function getCardCategory(card) {
+    if (card.classList.contains('feature-card')) return 'Feature';
+    if (card.classList.contains('mode-card')) return 'Game Mode';
+    if (card.classList.contains('board-card')) return 'Board Theme';
+    if (card.classList.contains('character-card')) return 'Character';
+    if (card.classList.contains('token-item')) return 'Token Action';
+    if (card.classList.contains('gallery-item')) return 'Gallery';
+    return 'Showcase';
+}
+
+function getCardMedia(card) {
+    const mediaNode = card.querySelector('.feature-icon, .mode-icon, .board-image, .character-image, .token-icon, .gallery-image');
+    if (!mediaNode) return '';
+
+    const image = getComputedStyle(mediaNode).backgroundImage;
+    return image && image !== 'none' ? image : '';
+}
+
+function openDetailCard(card) {
+    const titleNode = card.querySelector('h3, h4, p');
+    const textNode = card.querySelector('p');
+    const title = titleNode?.textContent.trim() || 'Ludo Ultra 3D';
+    const fallbackText = textNode && textNode !== titleNode ? textNode.textContent.trim() : '';
+
+    detailCategory.textContent = getCardCategory(card);
+    detailTitle.textContent = title;
+    detailDescription.textContent = detailDescriptions[title] || fallbackText || 'Explore this Ludo Ultra 3D showcase item with a closer look at its game-ready style and personality.';
+
+    const media = getCardMedia(card);
+    detailMedia.style.backgroundImage = media || 'url("assets/images/Ludo%20Icon%20v1.png")';
+
+    detailModal.classList.toggle('gallery-detail', card.classList.contains('gallery-item'));
+    detailModal.classList.add('active');
+    detailModal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeDetailCard() {
+    detailModal.classList.remove('active');
+    detailModal.classList.remove('gallery-detail');
+    detailModal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+}
+
+document.querySelectorAll('.feature-card, .mode-card, .board-card, .character-card, .token-item, .gallery-item').forEach(card => {
+    card.setAttribute('tabindex', '0');
+    if (!card.getAttribute('role')) {
+        card.setAttribute('role', 'button');
+    }
+    card.addEventListener('click', () => openDetailCard(card));
+    card.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            openDetailCard(card);
+        }
+    });
+});
+
+document.querySelectorAll('[data-detail-close]').forEach(control => {
+    control.addEventListener('click', closeDetailCard);
+});
+
+// ============================================
 // SCROLL REVEAL ANIMATIONS
 // ============================================
 const observerOptions = {
@@ -298,7 +406,7 @@ if ('ontouchstart' in window) {
 // DYNAMIC CONTENT LOADING
 // ============================================
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('🎮 Ludo Ultra 3D Website Loaded Successfully');
+    console.log('Ludo Ultra 3D Website Loaded Successfully');
     
     // Initialize components
     initializeGameModes();
@@ -346,6 +454,9 @@ document.addEventListener('keydown', (e) => {
     // Close mobile menu on Escape
     if (e.key === 'Escape') {
         navLinks.classList.remove('active');
+        if (detailModal.classList.contains('active')) {
+            closeDetailCard();
+        }
     }
 
     // Play/pause trailer on Space when focused

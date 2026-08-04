@@ -89,8 +89,8 @@ b {
     --hard-text-filter: var(--outside-outline-lg) var(--hard-shadow);
     --hard-text-filter-sm: var(--outside-outline) var(--hard-shadow-sm);
     --hard-text-filter-xs: var(--outside-outline) var(--hard-shadow-xs);
-    --game-text-border: 1px 0 0 var(--black-outline), -1px 0 0 var(--black-outline), 0 1px 0 var(--black-outline), 0 -1px 0 var(--black-outline), 0 4px 0 var(--black-outline);
-    --hard-panel-shadow: 8px 8px 0 rgba(0, 0, 0, 0.85), 0 18px 34px rgba(0, 0, 0, 0.35);
+    --game-text-border: 1px 0 0 var(--black-outline), -1px 0 0 var(--black-outline), 0 1px 0 var(--black-outline), 0 -1px 0 var(--black-outline), 0 2px 0 var(--black-outline);
+    --hard-panel-shadow: 4px 5px 0 rgba(0, 0, 0, 0.78), 0 8px 16px rgba(0, 0, 0, 0.24);
 }
 
 /* ============================================
@@ -115,7 +115,8 @@ b {
     font-size: 3rem;
     text-align: center;
     margin-bottom: 3rem;
-    background: linear-gradient(135deg, #00d4ff, #ff006e, #00ff88);
+    /* background: linear-gradient(135deg, #00d4ff, #ff006e, #00ff88); */
+    background: rgb(236, 236, 11);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -1132,7 +1133,8 @@ body::before {
 }
 
 .section-title {
-    background: linear-gradient(180deg, #fff799 0%, var(--cartoon-orange) 36%, var(--cartoon-pink) 72%, var(--cartoon-violet) 100%);
+    /* background: linear-gradient(180deg, #fff799 0%, var(--cartoon-orange) 36%, var(--cartoon-pink) 72%, var(--cartoon-violet) 100%); */
+    background: ffeb00;
     -webkit-background-clip: text;
     background-clip: text;
 }
@@ -1395,7 +1397,7 @@ body::before {
 .faq-item:hover,
 .download-btn:hover,
 .social-links a:hover {
-    box-shadow: 10px 10px 0 var(--black-outline), 0 0 32px rgba(0, 212, 255, 0.35);
+    box-shadow: 5px 5px 0 var(--black-outline), 0 0 16px rgba(0, 212, 255, 0.35);
 }
 
 .gallery-item p,
@@ -1544,6 +1546,235 @@ body::before {
 .gallery-item p,
 .social-card .social-btn {
     filter: none;
+}
+
+.hero-ctas .cta-primary,
+.hero-ctas .cta-secondary {
+    box-shadow: var(--hard-panel-shadow), inset 0 2px 0 rgba(255, 255, 255, 0.28);
+}
+
+.hero-ctas .cta-primary:hover,
+.hero-ctas .cta-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--hard-panel-shadow), inset 0 2px 0 rgba(255, 255, 255, 0.32);
+}
+
+.trailer-thumbnails .thumbnail {
+    /* box-shadow: var(--hard-panel-shadow), inset 0 3px 0 rgba(255, 255, 255, 0.28); */
+}
+
+.trailer-thumbnails .thumbnail:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--hard-panel-shadow), inset 0 3px 0 rgba(255, 255, 255, 0.32);
+}
+
+.trailer-thumbnails .thumbnail.active {
+    box-shadow: var(--hard-panel-shadow), 0 0 10px rgba(255, 63, 180, 0.22), inset 0 3px 0 rgba(255, 255, 255, 0.34);
+}
+
+/* Normalize link/button text borders and button shadows. */
+a,
+button,
+.nav-links a,
+.footer-section a,
+.footer-section li,
+.footer-section p,
+.hero-ctas .cta-primary,
+.hero-ctas .cta-secondary,
+.thumbnail,
+.download-btn,
+.social-btn,
+.social-links a {
+    filter: none !important;
+}
+
+a,
+button,
+.nav-links a,
+.footer-section a,
+.footer-section p,
+.hero-ctas .cta-primary,
+.hero-ctas .cta-secondary,
+.thumbnail span,
+.download-btn strong,
+.social-btn {
+    text-shadow: var(--game-text-border);
+}
+
+.nav-links a,
+.footer-section a {
+    border: none;
+    box-shadow: none !important;
+}
+
+.nav-links a:hover,
+.footer-section a:hover {
+    box-shadow: none !important;
+}
+
+.hero-ctas .cta-primary,
+.hero-ctas .cta-secondary,
+.thumbnail,
+.download-btn,
+.social-btn,
+.social-links a {
+    border-color: var(--black-outline);
+    box-shadow: var(--hard-panel-shadow), inset 0 2px 0 rgba(255, 255, 255, 0.28) !important;
+}
+
+.hero-ctas .cta-primary:hover,
+.hero-ctas .cta-secondary:hover,
+.thumbnail:hover,
+.download-btn:hover,
+.social-btn:hover,
+.social-links a:hover {
+    box-shadow: var(--hard-panel-shadow), inset 0 2px 0 rgba(255, 255, 255, 0.32) !important;
+}
+
+.social-card,
+.social-card h3,
+.social-card p,
+.social-card span,
+.social-card .social-btn {
+    filter: none !important;
+}
+
+.social-card h3,
+.social-card p,
+.social-card .social-btn {
+    text-shadow: var(--game-text-border);
+}
+
+/* ============================================
+   DETAIL CARD VIEW
+   ============================================ */
+.detail-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 3000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+.detail-modal.active {
+    display: flex;
+}
+
+.detail-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(3, 8, 28, 0.72);
+    backdrop-filter: blur(8px);
+}
+
+.detail-card {
+    position: relative;
+    z-index: 1;
+    width: min(940px, 100%);
+    max-height: min(86vh, 760px);
+    display: grid;
+    grid-template-columns: minmax(260px, 0.95fr) minmax(280px, 1.05fr);
+    gap: 1.25rem;
+    padding: 1rem;
+    overflow: hidden;
+    background:
+        var(--glass-shine),
+        linear-gradient(135deg, rgba(255, 63, 180, 0.18), rgba(33, 212, 255, 0.14));
+    border: 4px solid var(--black-outline);
+    border-radius: 8px;
+    box-shadow: var(--hard-panel-shadow), inset 0 2px 0 rgba(255, 255, 255, 0.3);
+}
+
+.detail-media {
+    min-height: 340px;
+    border: 4px solid var(--black-outline);
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.28);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.22);
+}
+
+.detail-modal.gallery-detail .detail-card {
+    width: min(1180px, 100%);
+    grid-template-columns: minmax(420px, 1.35fr) minmax(280px, 0.65fr);
+}
+
+.detail-modal.gallery-detail .detail-media {
+    min-height: min(74vh, 680px);
+    background-size: contain;
+}
+
+.detail-copy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.9rem;
+    padding: 1rem;
+}
+
+.detail-eyebrow {
+    color: var(--cartoon-sky);
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    margin: 0;
+    text-shadow: var(--game-text-border);
+}
+
+.detail-copy h2 {
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(2rem, 5vw, 3.4rem);
+    line-height: 1;
+    text-shadow: var(--game-text-border);
+}
+
+.detail-copy p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    filter: none !important;
+    text-shadow: var(--game-text-border);
+}
+
+.detail-close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    z-index: 2;
+    width: 42px;
+    height: 42px;
+    border: 3px solid var(--black-outline);
+    border-radius: 8px;
+    color: #ffffff;
+    background:
+        var(--glass-shine),
+        linear-gradient(135deg, var(--cartoon-pink), var(--cartoon-violet));
+    box-shadow: var(--hard-panel-shadow), inset 0 2px 0 rgba(255, 255, 255, 0.28);
+    cursor: pointer;
+}
+
+.feature-card,
+.mode-card,
+.board-card,
+.character-card,
+.token-item,
+.gallery-item {
+    cursor: pointer;
+}
+
+.feature-card:focus-visible,
+.mode-card:focus-visible,
+.board-card:focus-visible,
+.character-card:focus-visible,
+.token-item:focus-visible,
+.gallery-item:focus-visible {
+    outline: 3px solid var(--accent-yellow);
+    outline-offset: 4px;
 }
 
 /* ============================================
@@ -1770,6 +2001,24 @@ body::before {
 
     .download-btn div {
         text-align: center;
+    }
+
+    .detail-card {
+        grid-template-columns: 1fr;
+        overflow-y: auto;
+    }
+
+    .detail-modal.gallery-detail .detail-card {
+        grid-template-columns: 1fr;
+        width: min(96vw, 640px);
+    }
+
+    .detail-media {
+        min-height: 280px;
+    }
+
+    .detail-modal.gallery-detail .detail-media {
+        min-height: min(68vh, 560px);
     }
 
     /* Footer */
