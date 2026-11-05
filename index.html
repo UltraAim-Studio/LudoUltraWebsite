@@ -3,523 +3,369 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ludo Ultra 3D - The classic Ludo experience, reimagined in a stunning 3D world. Play online with friends, challenge the computer, and dominate the leaderboard!">
-    <meta name="theme-color" content="#1a1f3a">
-    <title>Ludo Ultra 3D - Play the Ultimate 3D Ludo Game</title>
+    <meta name="description" content="Ludo Ultra 3D — Roll the dice, rule the board. Play online with friends, challenge the computer, and climb the leaderboard in a stunning 3D world.">
+    <meta name="theme-color" content="#0a1638">
+    <title>Ludo Ultra 3D — Roll. Move. Win Together!</title>
+    <link rel="icon" type="image/png" href="assets/images/Ludo%20Ultra%20App%20Icon%20512.png">
     <link rel="stylesheet" href="styles.css">
 </head>
+<body>
 
+    <!-- Ticker -->
+    <div class="ticker" aria-hidden="true">
+        <div class="ticker-track">
+            <span>Roll the dice ✦ Win together ✦ Online · Friends · Computer ✦ 9 board themes ✦ 16 token actions ✦ Free to play ✦&nbsp;</span>
+            <span>Roll the dice ✦ Win together ✦ Online · Friends · Computer ✦ 9 board themes ✦ 16 token actions ✦ Free to play ✦&nbsp;</span>
+        </div>
+    </div>
 
-<body class="light-heading">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">
-                <img class="logo-img" src="assets/images/Ludo%20Icon%20v1.png" alt="Ludo Ultra 3D logo">
-                <span class="logo-text">Ludo Ultra 3D</span>
-            </div>
-            <button class="menu-toggle" id="menuToggle">
-                <span></span>
-                <span></span>
-                <span></span>
+            <a class="logo" href="#hero">
+                <img class="logo-img" src="assets/images/Ludo%20Ultra%20App%20Icon%20512.png" alt="Ludo Ultra 3D logo">
+                <span class="logo-text">Ludo Ultra <b>3D</b></span>
+            </a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+                <span></span><span></span><span></span>
             </button>
             <ul class="nav-links" id="navLinks">
+                <li><a href="#board">The Board</a></li>
+                <li><a href="#screenshots">Screenshots</a></li>
                 <li><a href="#trailers">Trailers</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#modes">Game Modes</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#download">Download</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#download" class="nav-cta">Get the game</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section class="hero" id="hero">
-        <div class="hero-video-container">
-            <video 
-                class="hero-video" 
-                id="heroVideo"
-                autoplay 
-                muted 
-                loop 
-                playsinline
-                poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 1080'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%230d1b3a;stop-opacity:1' /%3E%3Cstop offset='50%25' style='stop-color:%231a2a4a;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23152a52;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23grad)' width='1920' height='1080'/%3E%3C/svg%3E">
-                <source src="assets/videos/Ludo Ultra 3D Landscape Simple Trailer v3 - 720p.mp4" type="video/mp4">
-            </video>
-            <div class="hero-overlay"></div>
+        <div class="hero-tokens" aria-hidden="true">
+            <img class="float f1" src="assets/images/TokenFunActions/Icon_TokenFunActions_Dice.png" alt="">
+            <img class="float f2" src="assets/images/TokenFunActions/Icon_TokenFunActions_Snowball.png" alt="">
+            <img class="float f3" src="assets/images/TokenFunActions/Icon_TokenFunActions_Banana.png" alt="">
+            <img class="float f4" src="assets/images/TokenActions/Icon_TokenActions_Fire_Ball.png" alt="">
         </div>
 
-        <div class="hero-content">
-            <div class="hero-inner">
-                <img class="hero-logo" src="assets/images/Ludo%20Icon%20v1.png" alt="Ludo Ultra 3D logo">
-                <h1 class="hero-title">Ludo Ultra 3D</h1>
-                <p class="hero-tagline">Roll the dice. Rule the board.</p>
-                <p class="hero-subtitle">The classic Ludo experience, reimagined in a stunning 3D world.</p>
-                <div class="hero-ctas">
-                    <button class="cta-primary" id="playTrailerBtn">▶ Watch Trailer</button>
-                    <button class="cta-secondary" href="#download">Download Now</button>
+        <div class="hero-inner">
+            <p class="hero-kicker">Play Ludo Like Never Before</p>
+            <h1 class="hero-lockup" aria-label="Ludo Ultra 3D">
+                <span class="lockup-ludo">
+                    <span class="ch c1">L</span><span class="ch c2">U</span><span class="ch c3">D</span><span class="ch c4">O</span>
+                </span>
+                <span class="lockup-ultra" aria-hidden="true"><i>★</i><b>ULTRA</b><i>★</i></span>
+                <span class="lockup-3d" aria-hidden="true">3D</span>
+            </h1>
+            <p class="hero-tagline">Roll the dice. Rule the board. <b>Win together.</b></p>
+            <p class="hero-sub">Stunning 3D boards, 16 token actions, and real-time matches with friends around the world.</p>
+
+            <div class="hero-stage">
+                <video class="hero-video" id="heroVideo" autoplay muted loop playsinline poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 1080'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%230d1b3a'/%3E%3Cstop offset='100%25' stop-color='%23291b68'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23g)' width='1920' height='1080'/%3E%3C/svg%3E">
+                    <source src="assets/videos/Ludo Ultra 3D Landscape Simple Trailer v3 - 720p.mp4" type="video/mp4">
+                </video>
+                <div class="stage-glow"></div>
+            </div>
+
+            <div class="hero-ctas">
+                <button class="dice-btn" id="playTrailerBtn">▶ Watch trailer</button>
+                <a class="dice-btn ghost" href="#download">Get the game</a>
+            </div>
+            <p class="hero-note">🎮 Play Online · 👥 With Friends · 💻 vs Computer</p>
+        </div>
+    </section>
+
+    <!-- Icon watermark -->
+    <div class="icon-watermark" aria-hidden="true">
+        <img src="assets/images/Ludo%20Ultra%20App%20Icon%20512.png" alt="">
+    </div>
+
+    <!-- THE BOARD — sticky board + four rooms -->
+    <section class="board-journey" id="board">
+        <div class="journey-head">
+            <h2 class="chunky" data-reveal><span class="ch c1">T</span><span class="ch c2">H</span><span class="ch c3">E</span> <span class="ch c4">B</span><span class="ch c5">O</span><span class="ch c1">A</span><span class="ch c2">R</span><span class="ch c3">D</span></h2>
+            <p data-reveal>Every square is a world. Scroll around the board and meet what lives on each color.</p>
+        </div>
+
+        <div class="journey">
+            <div class="board-sticky">
+                <div class="board" id="ludoBoard" aria-hidden="true">
+                    <div class="cross-h"></div>
+                    <div class="cross-v"></div>
+                    <div class="home home-g tl" data-room="rooms-green"></div>
+                    <div class="home home-r tr" data-room="rooms-green"></div>
+                    <div class="home home-b bl" data-room="rooms-green"></div>
+                    <div class="home home-y br" data-room="rooms-green"></div>
+                    <div class="center-goal"><span>HOME</span></div>
+                    <div class="token" id="boardToken"></div>
                 </div>
-                <p class="hero-feature">🎮 Play Online • 👥 With Friends • 💻 vs Computer</p>
+                <p class="board-hint" id="boardHint">Your token starts here — scroll to travel the board</p>
+            </div>
+
+            <div class="rooms">
+                <article class="room room-green" id="rooms-green" data-room-index="0">
+                    <div class="room-chip"><i></i> GREEN · BOARD THEMES</div>
+                    <h3>9 ways to play the same chase</h3>
+                    <p>From icy villages to metallic arenas — every board is a fresh world for the same thrilling race home.</p>
+                    <div class="board-themes">
+                        <figure class="bt"><img src="assets/images/Icon_Board/Icon_Model_LudoBoard%200%20Default.png" alt="Default board"><figcaption>Classic</figcaption></figure>
+                        <figure class="bt"><img src="assets/images/Icon_Board/Icon_Model_LudoBoard%201%20Round.png" alt="Round board"><figcaption>Round</figcaption></figure>
+                        <figure class="bt"><img src="assets/images/Icon_Board/Icon_Model_LudoBoard%202%20Ice.png" alt="Ice board"><figcaption>Ice</figcaption></figure>
+                        <figure class="bt"><img src="assets/images/Icon_Board/Icon_Model_LudoBoard%203%20Wooden.png" alt="Wooden board"><figcaption>Wooden</figcaption></figure>
+                        <figure class="bt"><img src="assets/images/Icon_Board/Icon_Model_LudoBoard%204%20Metal.png" alt="Metal board"><figcaption>Metal</figcaption></figure>
+                        <figure class="bt"><img src="assets/images/Icon_Board/Icon_Model_LudoBoard%205%20Rock.png" alt="Rock board"><figcaption>Rock</figcaption></figure>
+                        <figure class="bt"><img src="assets/images/Icon_Board/Icon_Model_LudoBoard%206%20Scifi.png" alt="Sci-fi board"><figcaption>Sci-Fi</figcaption></figure>
+                        <figure class="bt"><img src="assets/images/Icon_Board/Icon_Model_LudoBoard%207%20Black.png" alt="Black board"><figcaption>Black</figcaption></figure>
+                        <figure class="bt"><img src="assets/images/Icon_Board/Icon_Model_LudoBoard%208%20Octagon.png" alt="Octagon board"><figcaption>Octagon</figcaption></figure>
+                    </div>
+                </article>
+
+                <article class="room room-red" id="rooms-red" data-room-index="1">
+                    <div class="room-chip"><i></i> RED · GAME MODES</div>
+                    <h3>Six ways to sit down and play</h3>
+                    <p>Jump in instantly or set the table yourself. Every mode, one tap from the lobby.</p>
+                    <div class="mode-grid">
+                        <div class="mode-card"><img src="assets/images/Game%20Modes%20Icons/GameModesIcons%20-%20Quick%20Match.png" alt="Quick Match"><h4>Quick Match</h4><p>Instant action with random opponents</p></div>
+                        <div class="mode-card"><img src="assets/images/Game%20Modes%20Icons/GameModesIcons%20-%20Ludo%20Ultra%203D.png" alt="Private Room"><h4>Private Room</h4><p>Your room, your rules, your people</p></div>
+                        <div class="mode-card"><img src="assets/images/Game%20Modes%20Icons/GameModesIcons%20-%20Classic%20Ludo.png" alt="Pass and Play"><h4>Pass &amp; Play</h4><p>Family fun on one device</p></div>
+                        <div class="mode-card"><img src="assets/images/Game%20Modes%20Icons/GameModesIcons%20-%20Rank%20Match.png" alt="Rank Match"><h4>Rank Match</h4><p>Climb the leaderboard, earn the crown</p></div>
+                    </div>
+                </article>
+
+                <article class="room room-blue" id="rooms-blue" data-room-index="2">
+                    <div class="room-chip"><i></i> BLUE · TOKEN ACTIONS</div>
+                    <h3>16 moves that change the game</h3>
+                    <p>Slip past with a banana, freeze them with a snowball, light up the board. Wild actions, classic chaos.</p>
+                    <div class="token-fun">
+                        <img src="assets/images/TokenFunActions/Icon_TokenFunActions_Banana.png" alt="Banana token action">
+                        <img src="assets/images/TokenFunActions/Icon_TokenFunActions_Snowball.png" alt="Snowball token action">
+                        <img src="assets/images/TokenFunActions/Icon_TokenFunActions_Heart.png" alt="Heart token action">
+                        <img src="assets/images/TokenFunActions/Icon_TokenFunActions_PaperPlane.png" alt="Paper plane token action">
+                        <img src="assets/images/TokenFunActions/Icon_TokenFunActions_Rose.png" alt="Rose token action">
+                        <img src="assets/images/TokenFunActions/Icon_TokenFunActions_LoveYou.png" alt="Love you token action">
+                        <img src="assets/images/TokenFunActions/Icon_TokenFunActions_WaterBalloon.png" alt="Water balloon token action">
+                        <img src="assets/images/TokenFunActions/Icon_TokenFunActions_Dance.png" alt="Dance token action">
+                    </div>
+                    <div class="token-fun token-fun--attack">
+                        <img src="assets/images/TokenActions/Icon_TokenActions_Fire_Ball.png" alt="Fireball token action">
+                        <img src="assets/images/TokenActions/Icon_TokenActions_Rock_Throw.png" alt="Rock throw token action">
+                        <img src="assets/images/TokenActions/Icon_TokenActions_Gun_Shoot.png" alt="Gun shoot token action">
+                        <img src="assets/images/TokenActions/Icon_TokenActions_Sword.png" alt="Sword token action">
+                        <img src="assets/images/TokenActions/Icon_TokenActions_Water_Splash.png" alt="Water splash token action">
+                        <img src="assets/images/TokenActions/Icon_TokenActions_Grenade.png" alt="Grenade token action">
+                    </div>
+                </article>
+
+                <article class="room room-yellow" id="rooms-yellow" data-room-index="3">
+                    <div class="room-chip"><i></i> YELLOW · CHARACTERS</div>
+                    <h3>Build a token that's yours</h3>
+                    <p>Mix hats, shades, and streetwear. Then swap to a pet, a dragon, or a whole crew — your board, your cast.</p>
+                    <div class="char-items">
+                        <img src="assets/images/Character%20Item%20Icons/Hat%20icon.png" alt="Hats">
+                        <img src="assets/images/Character%20Item%20Icons/Hairstyle%20icon.png" alt="Hairstyles">
+                        <img src="assets/images/Character%20Item%20Icons/Glasses%20icon.png" alt="Glasses">
+                        <img src="assets/images/Character%20Item%20Icons/Gloves%20icon.png" alt="Gloves">
+                        <img src="assets/images/Character%20Item%20Icons/Outwear%20icon.png" alt="Outwear">
+                        <img src="assets/images/Character%20Item%20Icons/Shoes%20icon.png" alt="Shoes">
+                    </div>
+                    <p class="room-foot">…plus cats, dragons, jokers and more — unlock as you play.</p>
+                </article>
+
+                <div class="room room-home" id="room-home" data-room-index="4">
+                    <div class="home-cta">
+                        <h3>You made it home 🏠</h3>
+                        <p>The fastest way to learn the board is to roll it yourself.</p>
+                        <a class="dice-btn" href="#download">Get Ludo Ultra 3D</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Featured Trailers Section -->
+    <!-- Screenshot parade -->
+    <section class="screens" id="screenshots">
+        <div class="screens-head container">
+            <h2 class="chunky" data-reveal><span class="ch c4">S</span><span class="ch c5">T</span><span class="ch c1">R</span><span class="ch c2">A</span><span class="ch c3">I</span><span class="ch c4">G</span><span class="ch c5">H</span><span class="ch c1">T</span><span class="ch c2">S</span></h2>
+            <p data-reveal>Swipe the gallery — it's a real match, not a mockup.</p>
+        </div>
+        <div class="parade" id="parade">
+            <figure class="shot" data-reveal><img src="assets/images/tablet/tablet-1.jpg" alt="Ludo Ultra 3D main menu — Roll Play, win together" loading="lazy"><figcaption>Main menu</figcaption></figure>
+            <figure class="shot" data-reveal><img src="assets/images/tablet/tablet-2.jpg" alt="Live 4-player Ludo match in a forest world" loading="lazy"><figcaption>Live 4P match</figcaption></figure>
+            <figure class="shot" data-reveal><img src="assets/images/tablet/tablet-3.jpg" alt="Snakes and Ladders arcade mode in a stadium" loading="lazy"><figcaption>Snakes &amp; Ladders</figcaption></figure>
+            <figure class="shot" data-reveal><img src="assets/images/tablet/tablet-4.jpg" alt="Snow village board with environment gallery" loading="lazy"><figcaption>Boards &amp; environments</figcaption></figure>
+            <figure class="shot" data-reveal><img src="assets/images/tablet/tablet-5.jpg" alt="Character customization and dice tray" loading="lazy"><figcaption>Characters &amp; dice</figcaption></figure>
+            <figure class="shot" data-reveal><img src="assets/images/tablet/tablet-6.jpg" alt="Token fun actions during gameplay" loading="lazy"><figcaption>Token actions</figcaption></figure>
+            <figure class="shot" data-reveal><img src="assets/images/tablet/tablet-7.jpg" alt="Personalizing your token" loading="lazy"><figcaption>Build your token</figcaption></figure>
+            <figure class="shot" data-reveal><img src="assets/images/tablet/tablet-8.jpg" alt="Board theme collage" loading="lazy"><figcaption>Theme collage</figcaption></figure>
+        </div>
+    </section>
+
+    <!-- Trailers -->
     <section class="trailers" id="trailers">
         <div class="container">
-            <h2 class="section-title">Featured Trailers</h2>
-            
-            <div class="trailers-content">
-                <div class="main-player">
-                    <div class="video-wrapper">
-                        <video 
-                            class="main-video" 
-                            id="mainTrailer"
-                            muted
-                            controls
-                            playsinline>
-                            <source src="assets/videos/Ludo Ultra 3D Landscape Simple Trailer v3 - 720p.mp4" type="video/mp4">
-                        </video>
-                        <!-- poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 1080'%3E%3Cdefs%3E%3ClinearGradient id='grad2' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23ff006e;stop-opacity:0.3' /%3E%3Cstop offset='100%25' style='stop-color:%238338ec;stop-opacity:0.3' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23grad2)' width='1920' height='1080'/%3E%3Ctext x='50%25' y='50%25' font-size='72' fill='white' text-anchor='middle' dominant-baseline='middle' font-family='Arial' font-weight='bold'%3ETap to Play%3C/text%3E%3C/svg%3E"> -->
+            <h2 class="chunky" data-reveal><span class="ch c3">T</span><span class="ch c4">R</span><span class="ch c5">A</span><span class="ch c1">I</span><span class="ch c2">L</span><span class="ch c3">E</span><span class="ch c4">R</span><span class="ch c5">S</span></h2>
+            <p class="section-sub" data-reveal>Real footage, straight from the board.</p>
+
+            <div class="trailer-wrap">
+                <div class="video-wrapper" id="mainPlayer">
+                    <video class="main-video" id="mainTrailer" muted controls playsinline preload="none">
+                        <source src="assets/videos/Ludo Ultra 3D Landscape Simple Trailer v3 - 720p.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="trailer-caption">
+                    <h3 id="trailerTitle">Main Trailer</h3>
+                    <p id="trailerDesc">The full experience, in one take.</p>
+                </div>
+                <div class="trailer-thumbs" id="trailerThumbs"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Banner -->
+    <section class="download-banner-section" aria-hidden="true">
+        <img src="assets/images/Ludo%20Ultra%20Banner.jpg" alt="">
+    </section>
+
+    <!-- Download CTA -->
+    <section class="download" id="download">
+        <div class="sign" data-reveal>
+            <h2 class="chunky">READY TO ROLL?</h2>
+            <p>Free to play. Optional cosmetics. Zero waiting for a fun round.</p>
+            <div class="store-buttons">
+                <a href="#" class="store-btn apple" title="Coming soon">
+                    <span class="store-kicker">Coming soon on</span>
+                    <span class="store-name">App Store</span>
+                </a>
+                <a href="#" class="store-btn google" title="Available">
+                    <span class="store-kicker">Available on</span>
+                    <span class="store-name">Google Play</span>
+                </a>
+            </div>
+            <p class="store-note">Also coming to Windows and Web</p>
+        </div>
+    </section>
+
+    <!-- Join Our Community -->
+    <section class="community" id="community">
+        <div class="container">
+            <h2 class="chunky" data-reveal><span class="ch c1">J</span><span class="ch c2">O</span><span class="ch c3">I</span><span class="ch c4">N</span> <span class="ch c5">O</span><span class="ch c1">U</span><span class="ch c2">R</span> <span class="ch c3">C</span><span class="ch c4">O</span><span class="ch c5">M</span><span class="ch c1">M</span><span class="ch c2">U</span><span class="ch c3">N</span><span class="ch c4">I</span><span class="ch c5">T</span><span class="ch c1">Y</span></h2>
+            <p class="section-sub" data-reveal>Follow us on your favorite platforms</p>
+            <div class="community-grid">
+                <a class="community-card" href="#" target="_blank" rel="noopener noreferrer" data-reveal>
+                    <div class="community-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
                     </div>
-                    <div class="portrait-trailer-card">
-                        <video
-                            class="portrait-trailer-video"
-                            id="portraitTrailer"
-                            muted
-                            loop
-                            playsinline
-                            controls>
-                            <source src="assets/videos/LudoUltra Trailer - Background - 25 may_01.mp4" type="video/mp4">
-                        </video>
-                        <div class="portrait-trailer-copy">
-                            <h3>Mobile Trailer</h3>
-                            <p>Portrait preview for reels, shorts, and phone-first gameplay.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="trailer-thumbnails">
-                    <button class="thumbnail active" data-trailer="main">
-                        <div class="thumb-icon">🎬</div>
-                        <h3>Main Trailer</h3>
-                    </button>
-                    <button class="thumbnail" data-trailer="gameplay">
-                        <div class="thumb-icon">🎮</div>
-                        <h3>Capture Action</h3>
-                    </button>
-                    <button class="thumbnail" data-trailer="portrait">
-                        <div class="thumb-icon">📱</div>
-                        <h3>Portrait Trailer</h3>
-                    </button>
-                    <button class="thumbnail" data-trailer="multiplayer">
-                        <div class="thumb-icon">👥</div>
-                        <h3>Overview</h3>
-                    </button>
-                    <button class="thumbnail" data-trailer="characters">
-                        <div class="thumb-icon">🎭</div>
-                        <h3>Character Custom</h3>
-                    </button>
-                    <button class="thumbnail" data-trailer="tokens">
-                        <div class="thumb-icon">✨</div>
-                        <h3>Fun Action</h3>
-                    </button>
-                    <button class="thumbnail" data-trailer="boards">
-                        <div class="thumb-icon">🌍</div>
-                        <h3>Landscape Full</h3>
-                    </button>
-                    <button class="thumbnail" data-trailer="dice">
-                        <div class="thumb-icon"><img src="assets/images/TokenFunActions/Icon_TokenFunActions_Dice.png" alt=""></div>
-                        <h3>Dice Roll</h3>
-                    </button>
-                    <button class="thumbnail" data-trailer="jump">
-                        <div class="thumb-icon"><img src="assets/images/TokenFunActions/Icon_TokenFunActions_PaperPlane.png" alt=""></div>
-                        <h3>Jump Action</h3>
-                    </button>
-                    <button class="thumbnail" data-trailer="capture2">
-                        <div class="thumb-icon"><img src="assets/images/TokenActions/Icon_TokenActions_Gun_Shoot.png" alt=""></div>
-                        <h3>Capture 2</h3>
-                    </button>
-                    <button class="thumbnail" data-trailer="home">
-                        <div class="thumb-icon"><img src="assets/images/Icon_Board/Icon_Model_LudoBoard%200%20Default.png" alt=""></div>
-                        <h3>Get Home</h3>
-                    </button>
-                    <button class="thumbnail" data-trailer="winner">
-                        <div class="thumb-icon"><img src="assets/images/Game%20Modes%20Icons/GameModesIcons%20-%20Rank%20Match.png" alt=""></div>
-                        <h3>Winner</h3>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Game Features Section -->
-    <section class="features" id="features">
-        <div class="container">
-            <h2 class="section-title">Amazing Features</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon"></div>
-                    <h3>Online Multiplayer</h3>
-                    <p>Play with players around the world in real-time matches</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon"></div>
-                    <h3>Play with Friends</h3>
-                    <p>Challenge your friends and dominate the board together</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon"></div>
-                    <h3>Play vs Computer</h3>
-                    <p>Test your skills against intelligent AI opponents</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon"></div>
-                    <h3>Pass & Play</h3>
-                    <p>Local multiplayer mode perfect for family fun</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon"></div>
-                    <h3>Character Customization</h3>
-                    <p>Personalize your pieces with unique character designs</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon"></div>
-                    <h3>Token Actions</h3>
-                    <p>Unlock special powers to turn the game around</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon"></div>
-                    <h3>Leaderboard</h3>
-                    <p>Climb the ranks and prove you're the ultimate Ludo master</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon"></div>
-                    <h3>Rewards & Quests</h3>
-                    <p>Earn rewards by completing daily quests and challenges</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Game Modes Section -->
-    <section class="modes" id="modes">
-        <div class="container">
-            <h2 class="section-title">Game Modes</h2>
-            <div class="modes-grid">
-                <div class="mode-card">
-                    <div class="mode-icon"></div>
-                    <h3>Quick Match</h3>
-                    <p>Jump into instant action with random opponents</p>
-                </div>
-                <div class="mode-card">
-                    <div class="mode-icon"></div>
-                    <h3>Private Room</h3>
-                    <p>Create your own room with custom settings</p>
-                </div>
-                <div class="mode-card">
-                    <div class="mode-icon"></div>
-                    <h3>Join Room</h3>
-                    <p>Enter friends' rooms using a room code</p>
-                </div>
-                <div class="mode-card">
-                    <div class="mode-icon"></div>
-                    <h3>Play with Friends</h3>
-                    <p>Challenge specific friends from your contacts</p>
-                </div>
-                <div class="mode-card">
-                    <div class="mode-icon"></div>
-                    <h3>Play with Computer</h3>
-                    <p>Sharpen your skills against AI opponents</p>
-                </div>
-                <div class="mode-card">
-                    <div class="mode-icon"></div>
-                    <h3>Pass & Play</h3>
-                    <p>Play locally by passing the device between players</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Board Themes Section -->
-    <section class="boards" id="boards">
-        <div class="container">
-            <h2 class="section-title">Board Themes</h2>
-            <div class="boards-grid">
-                <div class="board-card">
-                    <div class="board-image"></div>
-                    <h3>Forest Theme</h3>
-                    <p>Immerse yourself in nature's beauty with lush green aesthetics</p>
-                </div>
-                <div class="board-card">
-                    <div class="board-image"></div>
-                    <h3>Sunny Beach</h3>
-                    <p>Relax and play under the tropical sun with vibrant beach vibes</p>
-                </div>
-                <div class="board-card">
-                    <div class="board-image"></div>
-                    <h3>Sky World</h3>
-                    <p>Soar through the clouds in this celestial gaming paradise</p>
-                </div>
-                <div class="board-card">
-                    <div class="board-image"></div>
-                    <h3>Future Tech</h3>
-                    <p>Experience gaming in a futuristic high-tech environment</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Character Showcase Section -->
-    <section class="characters" id="characters">
-        <div class="container">
-            <h2 class="section-title">Character Showcase</h2>
-            <div class="characters-gallery">
-                <div class="character-card">
-                    <div class="character-image"></div>
-                    <h3>Wizard</h3>
-                    <p>Mystical and powerful, with magical abilities</p>
-                </div>
-                <div class="character-card">
-                    <div class="character-image"></div>
-                    <h3>Hero</h3>
-                    <p>Bold and fearless, ready to conquer any challenge</p>
-                </div>
-                <div class="character-card">
-                    <div class="character-image"></div>
-                    <h3>Vampire</h3>
-                    <p>Dark and mysterious with supernatural charm</p>
-                </div>
-                <div class="character-card">
-                    <div class="character-image"></div>
-                    <h3>Jester</h3>
-                    <p>Playful and unpredictable, keeping things fun</p>
-                </div>
-                <div class="character-card">
-                    <div class="character-image"></div>
-                    <h3>Dragon</h3>
-                    <p>Legendary and majestic, master of all terrains</p>
-                </div>
-                <div class="character-card">
-                    <div class="character-image"></div>
-                    <h3>Fairy</h3>
-                    <p>Magical and graceful, brings good fortune</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Token Actions Section -->
-    <section class="tokens" id="tokens">
-        <div class="container">
-            <h2 class="section-title">Token Actions</h2>
-            <p class="section-subtitle">Unlock special powers to change the game</p>
-            <div class="tokens-grid">
-                <div class="token-item">
-                    <div class="token-icon"></div>
-                    <h4>Banana</h4>
-                    <p>Slip past obstacles with speed</p>
-                </div>
-                <div class="token-item">
-                    <div class="token-icon"></div>
-                    <h4>Snowball</h4>
-                    <p>Freeze opponents temporarily</p>
-                </div>
-                <div class="token-item">
-                    <div class="token-icon"></div>
-                    <h4>Cake</h4>
-                    <p>Gain extra moves and bonuses</p>
-                </div>
-                <div class="token-item">
-                    <div class="token-icon"></div>
-                    <h4>Heart</h4>
-                    <p>Heal and protect your pieces</p>
-                </div>
-                <div class="token-item">
-                    <div class="token-icon"></div>
-                    <h4>Fireball</h4>
-                    <p>Blast through the board with power</p>
-                </div>
-                <div class="token-item">
-                    <div class="token-icon"></div>
-                    <h4>Rock</h4>
-                    <p>Crush down barriers and blocks</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section class="gallery" id="gallery">
-        <div class="container">
-            <h2 class="section-title">Gallery</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <div class="gallery-image"></div>
-                    <p>Phone Screenshot 2</p>
-                </div>
-                <div class="gallery-item">
-                    <div class="gallery-image"></div>
-                    <p>Phone Screenshot 3</p>
-                </div>
-                <div class="gallery-item">
-                    <div class="gallery-image"></div>
-                    <p>Phone Screenshot 4</p>
-                </div>
-                <div class="gallery-item">
-                    <div class="gallery-image"></div>
-                    <p>Phone Screenshot 5</p>
-                </div>
-                <div class="gallery-item">
-                    <div class="gallery-image"></div>
-                    <p>Phone Screenshot 6</p>
-                </div>
-                <div class="gallery-item">
-                    <div class="gallery-image"></div>
-                    <p>Phone Screenshot 7</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Social Media Section -->
-    <section class="social" id="social">
-        <div class="container">
-            <h2 class="section-title">Join Our Community</h2>
-            <p class="section-subtitle">Follow us on your favorite platforms</p>
-            <div class="social-grid">
-                <a href="#" class="social-card" target="_blank">
-                    <div class="social-icon"><img src="https://img.icons8.com/color/96/youtube-play.png" alt="YouTube icon"></div>
                     <h3>YouTube</h3>
                     <p>Watch tutorials and highlights</p>
-                    <h3 class="social-btn">Subscribe</h3>
+                    <span class="community-btn">Subscribe</span>
                 </a>
-                <a href="#" class="social-card" target="_blank">
-                    <div class="social-icon"><img src="https://img.icons8.com/color/96/instagram-new.png" alt="Instagram icon"></div>
+                <a class="community-card" href="#" target="_blank" rel="noopener noreferrer" data-reveal>
+                    <div class="community-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.372 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.6.111.82-.26.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222 0 1.604-.015 2.896-.015 3.286 0 .319.217.694.825.576C20.565 21.795 24 17.295 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                    </div>
                     <h3>Instagram</h3>
                     <p>Daily updates and behind-the-scenes</p>
-                    <h3 class="social-btn">Follow</h3>
+                    <span class="community-btn">Follow</span>
                 </a>
-                <a href="#" class="social-card" target="_blank">
-                    <div class="social-icon"><img src="https://img.icons8.com/color/96/discord-logo.png" alt="Discord icon"></div>
+                <a class="community-card" href="#" target="_blank" rel="noopener noreferrer" data-reveal>
+                    <div class="community-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.492c-1.53-.742-3.17-1.279-4.885-1.514a.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.835a18.816 18.816 0 0 0-5.487 0c-.11-.258-.266-.585-.407-.835a.052.052 0 0 0-.052-.025c-1.714.235-3.354.772-4.884 1.515a.05.05 0 0 0-.024.044c-.645 9.61 4.26 19.005 10.981 21.21a.052.052 0 0 0 .056-.02c.408-.785.763-1.612 1.063-2.565a.05.05 0 0 0-.041-.06 13.46 13.46 0 0 1-1.871-.892.05.05 0 0 1-.005-.083c.126-.093.252-.19.372-.287a.05.05 0 0 1 .052-.007c3.928 1.793 8.18 1.793 12.062 0a.05.05 0 0 1 .053.007c.12.098.246.195.372.288a.05.05 0 0 1-.004.083c-.598.368-1.219.663-1.871.892a.05.05 0 0 0-.041.06c.3.953.655 1.78 1.063 2.565a.05.05 0 0 0 .056.019c6.728-2.204 11.635-11.586 10.979-21.207a.05.05 0 0 0-.025-.043z"/></svg>
+                    </div>
                     <h3>Discord</h3>
                     <p>Join our gaming community</p>
-                    <h3 class="social-btn">Join</h3>
+                    <span class="community-btn">Join</span>
                 </a>
-                <a href="#" class="social-card" target="_blank">
-                    <div class="social-icon"><img src="https://img.icons8.com/color/96/twitterx--v1.png" alt="X icon"></div>
+                <a class="community-card" href="#" target="_blank" rel="noopener noreferrer" data-reveal>
+                    <div class="community-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.657l-5.214-6.817L2.88 21.75H.576l7.732-8.835L0 2.25h6.826l4.722 6.245L15.744 2.25zM17.007 18.386h1.83L5.456 3.75H3.42L17.007 18.386z"/></svg>
+                    </div>
                     <h3>X / Twitter</h3>
                     <p>Latest news and announcements</p>
-                    <h3 class="social-btn">Follow</h3>
+                    <span class="community-btn">Follow</span>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- FAQ Section -->
+    <!-- FAQ -->
     <section class="faq" id="faq">
         <div class="container">
-            <h2 class="section-title">Frequently Asked Questions</h2>
+            <h2 class="chunky" data-reveal>FAQ</h2>
             <div class="faq-grid">
-                <div class="faq-item">
-                    <h3>How do I play with friends?</h3>
-                    <p>Create a private room, share the room code with your friends, and they can join instantly. You can also challenge specific friends from your contact list.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Is internet required?</h3>
-                    <p>Internet is required for online multiplayer modes. However, you can play locally using the Pass & Play mode without an internet connection.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Can I play against the computer?</h3>
-                    <p>Yes! We offer AI opponents with adjustable difficulty levels. Play as many games as you want to hone your skills.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>How do I customize my characters?</h3>
-                    <p>Visit the character customization section in your profile. Unlock new characters through gameplay, achievements, and the in-game store.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Is the game free?</h3>
-                    <p>Yes! Ludo Ultra 3D is completely free to play with optional in-game purchases for cosmetics and battle pass items.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Where can I report issues?</h3>
-                    <p>Contact our support team through the in-game help menu or email us at support@ludoultra3d.com</p>
-                </div>
+                <details class="faq-item" data-reveal>
+                    <summary>How do I play with friends?</summary>
+                    <p>Create a private room, share the room code, and friends jump in instantly. You can also challenge specific friends from your contact list.</p>
+                </details>
+                <details class="faq-item" data-reveal>
+                    <summary>Is internet required?</summary>
+                    <p>Online multiplayer needs a connection. Pass &amp; Play works fully offline — perfect for flights and family game night.</p>
+                </details>
+                <details class="faq-item" data-reveal>
+                    <summary>Can I play against the computer?</summary>
+                    <p>Yes — AI opponents with adjustable difficulty, so you can hone your routes at your own pace.</p>
+                </details>
+                <details class="faq-item" data-reveal>
+                    <summary>How do I customize my characters?</summary>
+                    <p>Head to the token screen in-game. Unlock new characters, items, and styles through gameplay, achievements, and the shop.</p>
+                </details>
+                <details class="faq-item" data-reveal>
+                    <summary>Is the game free?</summary>
+                    <p>Completely free to play. Optional in-game purchases are cosmetics and battle-pass items only.</p>
+                </details>
+                <details class="faq-item" data-reveal>
+                    <summary>Where can I report issues?</summary>
+                    <p>Use the in-game help menu or email <a href="mailto:support@ludoultra3d.com">support@ludoultra3d.com</a>.</p>
+                </details>
             </div>
         </div>
     </section>
 
-    <!-- Download / CTA Section -->
-    <section class="download" id="download">
+    <!-- Feedback Form -->
+    <section class="feedback" id="feedback">
         <div class="container">
-            <h2 class="section-title">Ready to Play?</h2>
-            <p class="section-subtitle">Download Ludo Ultra 3D today and join millions of players</p>
-            <div class="download-buttons">
-                <a href="#" class="download-btn app-store">
-                    <!-- <span class="store-icon">🍎</span> -->
-                    <img class="store-icon" src="https://img.icons8.com/?size=100&id=30840&format=png&color=FFFFFF" alt="YouTube icon" width="64" height="64">
-                    <div>
-                        <h4>Comming Soon on</h4>
-                        <h3>App Store</h3>
-                    </div>
-                </a>
-                <a href="#" class="download-btn google-play">
-                    <!-- <span class="store-icon">🤖</span> -->
-                    <img class="store-icon" src="https://img.icons8.com/?size=100&id=L1ws9zn2uD01&format=png&color=000000" alt="YouTube icon" width="64" height="64">
-                    <div>
-                        <h4>Available on</h4>
-                        <h3>Google Play</h3>
-                    </div>
-                </a>
-            </div>
-            <p class="coming-soon">Coming soon on Windows and Web</p>
+            <h2 class="chunky" data-reveal>Send Us Feedback</h2>
+            <p class="section-sub" data-reveal>Found a bug, have an idea, or just want to say hello? Drop us a line.</p>
+            <form class="feedback-form" id="feedbackForm" data-reveal>
+                <div class="form-row">
+                    <input type="text" name="name" placeholder="Your name" required>
+                    <input type="email" name="email" placeholder="Email address" required>
+                </div>
+                <input type="text" name="subject" placeholder="Subject" required>
+                <textarea name="message" rows="5" placeholder="What's on your mind?" required></textarea>
+                <button class="dice-btn" type="submit">Send message</button>
+            </form>
+            <p class="feedback-note" id="feedbackStatus"></p>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Ludo Ultra 3D 🎲</h3>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <p class="footer-logo">Ludo Ultra <b>3D</b> 🎲</p>
                     <p>Experience the ultimate 3D Ludo game with friends worldwide. Roll the dice. Rule the board.</p>
                 </div>
-                <div class="footer-section">
+                <div class="footer-col">
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="#trailers">Trailers</a></li>
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="#modes">Game Modes</a></li>
+                        <li><a href="#screenshots">Screenshots</a></li>
+                        <li><a href="#board">The Board</a></li>
                         <li><a href="#download">Download</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
+                <div class="footer-col">
                     <h4>Legal</h4>
                     <ul>
                         <li><a href="https://www.ultraaim.in/Games/LudoUltra3D/privacy-policy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a></li>
-                        <li><a href="https://www.ultraaim.in/Games/LudoUltra3D/terms-of-service.html" target="_blank" rel="noopener noreferrer">Terms & Conditions</a></li>
-                        <li><a href="https://www.ultraaim.in/">Owned By UltraAim Ptd</a></li>
-                        <!-- <li><a href="#">Account Deletion</a></li> -->
-                        <!-- <li><a href="#">Cookie Policy</a></li> -->
+                        <li><a href="https://www.ultraaim.in/Games/LudoUltra3D/terms-of-service.html" target="_blank" rel="noopener noreferrer">Terms &amp; Conditions</a></li>
+                        <li><a href="https://www.ultraaim.in/" target="_blank" rel="noopener noreferrer">Owned by UltraAim Pvt</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
+                <div class="footer-col">
                     <h4>Contact</h4>
                     <p>Email: <a href="mailto:support@ludoultra3d.com">support@ludoultra3d.com</a></p>
-                    <div class="social-links">
-                        <a href="#" title="YouTube">
-                            <img src="https://img.icons8.com/color/96/youtube-play.png" alt="YouTube icon" width="24" height="24">
-                        </a>
-                        <a href="#" title="Instagram">
-                            <img src="https://img.icons8.com/color/96/instagram-new.png" alt="Instagram icon" width="24" height="24">
-                        </a>
-                        <a href="#" title="Discord">
-                            <img src="https://img.icons8.com/color/96/discord-logo.png" alt="Discord icon" width="24" height="24">
-                        </a>
-                        <a href="#" title="X">
-                            <img src="https://img.icons8.com/color/96/twitterx--v1.png" alt="X icon" width="24" height="24">
-                        </a>
-                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -527,19 +373,6 @@
             </div>
         </div>
     </footer>
-
-    <div class="detail-modal" id="detailModal" aria-hidden="true">
-        <div class="detail-modal-backdrop" data-detail-close></div>
-        <div class="detail-card" role="dialog" aria-modal="true" aria-labelledby="detailTitle">
-            <button class="detail-close" type="button" data-detail-close aria-label="Close detail view">X</button>
-            <div class="detail-media" id="detailMedia"></div>
-            <div class="detail-copy">
-                <p class="detail-eyebrow" id="detailCategory">Showcase</p>
-                <h2 id="detailTitle">Card Title</h2>
-                <p id="detailDescription">Card description</p>
-            </div>
-        </div>
-    </div>
 
     <script src="script.js"></script>
 </body>
