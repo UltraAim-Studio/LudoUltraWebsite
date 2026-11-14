@@ -436,6 +436,37 @@
         </div>
     </footer>
 
+<!-- Item Detail Modal -->
+<div class="modal-overlay" id="itemModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-container">
+        <button class="modal-close" id="modalClose" aria-label="Close modal">&times;</button>
+
+        <div class="modal-nav">
+            <button class="modal-prev" id="modalPrev" aria-label="Previous item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <div class="modal-counter" id="modalCounter">1 / 9</div>
+            <button class="modal-next" id="modalNext" aria-label="Next item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 6l6 6-6 6"/></svg>
+            </button>
+        </div>
+
+        <div class="modal-content">
+            <div class="modal-media" id="modalMedia">
+                <img id="modalImage" src="" alt="">
+                <video id="modalVideo" controls playsinline style="display:none;"></video>
+            </div>
+            <div class="modal-info">
+                <span class="modal-category" id="modalCategory"></span>
+                <h2 class="modal-title" id="modalTitle"></h2>
+                <p class="modal-description" id="modalDescription"></p>
+                <div class="modal-meta" id="modalMeta"></div>
+                <div class="modal-gallery" id="modalGallery"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
     <script src="script.js"></script>
 </body>
 </html>
