@@ -102,13 +102,15 @@ const ludoBoard = document.getElementById('ludoBoard');
 const boardHint = document.getElementById('boardHint');
 const rooms = [...document.querySelectorAll('.room[data-room-index]')];
 
-const roomPositions = { 0: 'tl', 1: 'tr', 2: 'bl', 3: 'br', 4: 'c' };
+const roomPositions = { 0: 'tl', 1: 'tr', 2: 'bl', 3: 'br', 4: 'tl', 5: 'tr', 6: 'c' };
 const roomHints = {
-    0: 'Board themes — green corner',
-    1: 'Game modes — red corner',
-    2: 'Token actions — blue corner',
-    3: 'Characters — yellow corner',
-    4: 'Made it home — roll again!',
+    0: 'Dice collection — purple corner',
+    1: 'Board themes — green corner',
+    2: 'Game modes — red corner',
+    3: 'Token actions — blue corner',
+    4: 'Characters — yellow corner',
+    5: 'Environments — orange corner',
+    6: 'Made it home — roll again!',
 };
 
 const roomObserver = new IntersectionObserver(
