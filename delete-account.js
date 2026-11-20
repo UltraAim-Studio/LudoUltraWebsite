@@ -95,7 +95,7 @@ deletionForm.addEventListener('submit', async (event) => {
     deletionButton.disabled = true;
     deletionButton.textContent = 'Sending request...';
     deletionForm.setAttribute('aria-busy', 'true');
-    deletionStatus.textContent = 'Sending your request to Google Forms...';
+    deletionStatus.textContent = 'Sending your deletion request...';
 
     try {
         // An opaque response is not confirmation of receipt or account deletion.
@@ -106,11 +106,11 @@ deletionForm.addEventListener('submit', async (event) => {
             body,
             signal: controller.signal,
         });
-        deletionStatus.textContent = 'Request sent to Google Forms, but this page cannot confirm it was saved. This does not confirm account deletion. Your entries have been kept; use the direct Google Form link if you need confirmation.';
+        deletionStatus.textContent = 'Your deletion request was sent. Your account will be reviewed before any action is taken.';
     } catch (error) {
         deletionStatus.textContent = error.name === 'AbortError'
-            ? 'The request timed out; delivery is unknown. Your entries have been kept. Use the direct Google Form link if needed.'
-            : 'Could not confirm delivery. Your entries have been kept. Check your connection or use the direct Google Form link.';
+            ? 'The request timed out. Please try again later.'
+            : 'We could not send your request. Please check your connection and try again.';
     } finally {
         clearTimeout(timeout);
         deletionSubmitting = false;
