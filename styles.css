@@ -451,10 +451,19 @@ body {
     top: 90px;
     right: 26px;
     z-index: 30;
-    pointer-events: none;
+    cursor: pointer;
+    border-radius: 24px;
     opacity: 0.85;
     display: none;
     transition: top 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), bottom 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.icon-watermark:hover,
+.icon-watermark:focus-visible {
+    opacity: 1;
+}
+.icon-watermark:focus-visible {
+    outline: 3px solid var(--cyan);
+    outline-offset: 6px;
 }
 .icon-watermark img {
     width: 135px;
@@ -939,6 +948,13 @@ body {
     object-fit: cover;
     transition: transform 0.5s ease;
 }
+.shot[role="button"] {
+    cursor: zoom-in;
+}
+.shot:focus-visible {
+    outline: 3px solid var(--cyan);
+    outline-offset: 4px;
+}
 .shot:hover img {
     transform: scale(1.06);
 }
@@ -951,6 +967,58 @@ body {
     background: linear-gradient(transparent, rgba(6, 11, 28, 0.9));
     color: var(--cream);
     font-size: 0.95rem;
+}
+
+.screenshot-viewer {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    max-width: none;
+    height: 100vh;
+    height: 100dvh;
+    max-height: none;
+    margin: 0;
+    padding: 76px 20px 20px;
+    border: 0;
+    background: rgba(6, 11, 28, 0.95);
+    overflow: hidden;
+}
+.screenshot-viewer[open] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.screenshot-viewer::backdrop {
+    background: rgba(0, 0, 0, 0.85);
+}
+.screenshot-full {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 16px 60px rgba(0, 0, 0, 0.5);
+}
+.screenshot-close {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid var(--glass-border);
+    background: var(--bg-deep);
+    color: var(--cream);
+    font-size: 2rem;
+    line-height: 1;
+}
+.screenshot-close:hover {
+    background: var(--blue);
+}
+.screenshot-close:focus-visible {
+    outline: 3px solid var(--cyan);
+    outline-offset: 3px;
 }
 
 /* ============================================================
@@ -1280,6 +1348,188 @@ body {
 .feedback-note.ok { color: var(--green); }
 .feedback-note.err { color: var(--red); }
 
+/* Standalone account deletion page — scoped to leave the homepage unchanged. */
+.account-deletion-page .deletion-container {
+    max-width: 860px;
+    padding-top: 48px;
+    padding-bottom: 24px;
+}
+.account-deletion-page .deletion-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+.account-deletion-page .deletion-header img {
+    margin: 0 auto 20px;
+    border-radius: 20px;
+    filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.35));
+}
+.account-deletion-page .deletion-eyebrow {
+    color: var(--cyan);
+    letter-spacing: 3px;
+    font-size: 0.8rem;
+    margin-bottom: 12px;
+}
+.account-deletion-page h1 {
+    color: var(--cream);
+    font-size: clamp(2rem, 5vw, 3.4rem);
+    line-height: 1.1;
+    text-shadow: 0 4px 0 rgba(0, 0, 0, 0.35);
+    margin-bottom: 16px;
+}
+.account-deletion-page h1 span {
+    color: var(--yellow);
+}
+.account-deletion-page .deletion-header > p:last-child {
+    max-width: 580px;
+    margin-inline: auto;
+    color: var(--text-dim);
+    line-height: 1.6;
+}
+.account-deletion-page .deletion-panel {
+    padding: clamp(20px, 4vw, 40px);
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--r-lg);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+.account-deletion-page h2 {
+    color: var(--cream);
+    margin-bottom: 8px;
+}
+.account-deletion-page .deletion-help,
+.account-deletion-page .deletion-field small {
+    color: var(--text-dim);
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+.account-deletion-page .deletion-notice {
+    margin-top: 20px;
+    padding: 16px;
+    border: 1px solid rgba(255, 210, 63, 0.35);
+    border-radius: var(--r-sm);
+    background: rgba(255, 210, 63, 0.08);
+    line-height: 1.5;
+}
+.account-deletion-page .deletion-notice strong {
+    display: block;
+    color: var(--yellow);
+    margin-bottom: 4px;
+}
+.account-deletion-page .deletion-form {
+    max-width: none;
+    gap: 24px;
+}
+.account-deletion-page .deletion-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+}
+.account-deletion-page .deletion-field[hidden] {
+    display: none;
+}
+.account-deletion-page .deletion-help a {
+    color: var(--cyan);
+    text-decoration: underline;
+}
+.account-deletion-page .deletion-field label,
+.account-deletion-page legend {
+    color: var(--cream);
+}
+.account-deletion-page .deletion-field label span {
+    color: var(--text-dim);
+    font-size: 0.9rem;
+}
+.account-deletion-page .deletion-field input,
+.account-deletion-page .deletion-field textarea,
+.account-deletion-page .deletion-field select {
+    width: 100%;
+    min-width: 0;
+}
+.account-deletion-page select {
+    padding: 14px 18px;
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    background: var(--bg-deep);
+    color: var(--cream);
+    font: inherit;
+    color-scheme: dark;
+}
+.account-deletion-page select:focus-visible {
+    outline: 3px solid var(--cyan);
+    outline-offset: 2px;
+}
+.account-deletion-page .deletion-timing {
+    border: 0;
+    min-width: 0;
+}
+.account-deletion-page legend {
+    margin-bottom: 8px;
+}
+.account-deletion-page .deletion-options {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    margin-top: 14px;
+}
+.account-deletion-page .deletion-option {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 18px;
+    border: 1px solid var(--glass-border);
+    border-radius: var(--r-md);
+    background: rgba(6, 11, 28, 0.35);
+    cursor: pointer;
+}
+.account-deletion-page .deletion-option:has(input:checked) {
+    border-color: var(--cyan);
+    background: rgba(51, 212, 255, 0.1);
+}
+.account-deletion-page .deletion-option:focus-within {
+    outline: 2px solid var(--cyan);
+    outline-offset: 3px;
+}
+.account-deletion-page .deletion-option input {
+    flex: 0 0 20px;
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+    padding: 0;
+    accent-color: var(--cyan);
+}
+.account-deletion-page .deletion-option strong {
+    display: block;
+    color: var(--cream);
+    font-size: 1.15rem;
+    margin-bottom: 8px;
+}
+.account-deletion-page .deletion-option span span {
+    display: block;
+    color: var(--text-dim);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+.account-deletion-page .dice-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    max-width: 100%;
+    white-space: normal;
+}
+.account-deletion-page .deletion-footer {
+    margin-top: 28px;
+    text-align: center;
+    color: var(--text-dim);
+    font-size: 0.9rem;
+}
+@media (max-width: 600px) {
+    .account-deletion-page .form-row,
+    .account-deletion-page .deletion-options {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* ============================================================
    FOOTER
    ============================================================ */
@@ -1428,6 +1678,10 @@ body {
     max-width: 900px;
     width: 100%;
     max-height: 90vh;
+    max-height: min(90dvh, calc(100dvh - 48px));
+    display: flex;
+    flex-direction: column;
+    padding-top: 76px;
     background: linear-gradient(160deg, rgba(12, 20, 48, 0.98), rgba(6, 11, 28, 0.98));
     border: 1px solid rgba(51, 212, 255, 0.2);
     border-radius: 24px;
@@ -1519,23 +1773,38 @@ body {
 
 .modal-content {
     display: grid;
-    grid-template-columns: 1.2fr 1fr;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
     gap: 0;
-    min-height: 480px;
+    min-height: 0;
+    overflow-y: auto;
+    border-top: 1px solid rgba(51, 212, 255, 0.12);
 }
 
 .modal-media {
     position: relative;
-    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    height: clamp(280px, 55vh, 480px);
+    padding: 36px;
+    background:
+        radial-gradient(ellipse at center, rgba(51, 212, 255, 0.14), transparent 70%),
+        rgba(0, 0, 0, 0.25);
+    border-right: 1px solid rgba(51, 212, 255, 0.12);
     overflow: hidden;
 }
 .modal-media img,
 .modal-media video {
     width: 100%;
     height: 100%;
-    min-height: 480px;
-    object-fit: cover;
+    min-height: 0;
+    object-fit: contain;
+    object-position: center;
     transition: opacity 0.3s ease;
+}
+.modal-media img {
+    filter: drop-shadow(0 16px 20px rgba(0, 0, 0, 0.35));
 }
 .modal-media video {
     display: none;
@@ -1572,15 +1841,15 @@ body {
 
 .modal-info {
     padding: 40px 36px;
+    min-width: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    overflow-y: auto;
-    max-height: 90vh;
 }
 
 .modal-category {
     display: inline-block;
+    align-self: flex-start;
     font-size: 0.7rem;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -1672,17 +1941,28 @@ body {
 .modal-gallery-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    padding: 6px;
+    object-fit: contain;
     display: block;
 }
 
 @media (max-width: 768px) {
+    .modal-overlay {
+        padding: 12px;
+    }
+    .modal-container {
+        max-height: calc(100vh - 24px);
+        max-height: calc(100dvh - 24px);
+        padding-top: 64px;
+    }
     .modal-content {
         grid-template-columns: 1fr;
     }
-    .modal-media img,
-    .modal-media video {
-        min-height: 300px;
+    .modal-media {
+        height: clamp(220px, 42vh, 360px);
+        padding: 24px;
+        border-right: 0;
+        border-bottom: 1px solid rgba(51, 212, 255, 0.12);
     }
     .modal-info {
         padding: 28px 24px;
@@ -1692,6 +1972,9 @@ body {
     }
     .modal-nav {
         top: 8px;
+        left: 16px;
+        transform: none;
+        gap: 8px;
     }
     .modal-close {
         top: 8px;

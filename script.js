@@ -152,73 +152,73 @@ if ('ontouchstart' in window) {
 // ---------- Item Detail Modal ----------
 const ITEM_DATA = {
     dice: [
-        { id: 'dice-classic', name: 'Classic', category: 'Dice', desc: 'The timeless standard — clean white pips on a crisp cube. Balanced, familiar, and always fair.', img: 'assets/images/Icon_Dice/Icon_Dice_1_Default.png', gallery: ['assets/images/Icon_Dice/Icon_Dice_1_Default.png'], video: null },
-        { id: 'dice-metal', name: 'Metal', category: 'Dice', desc: 'Forged from brushed steel. Heavy in hand, satisfying to roll — every toss feels decisive.', img: 'assets/images/Icon_Dice/Icon_Dice_3_Metal.png', gallery: ['assets/images/Icon_Dice/Icon_Dice_3_Metal.png'], video: null },
-        { id: 'dice-marble', name: 'Marble', category: 'Dice', desc: 'Swirled veins of stone. No two faces alike — elegance meets chance in every roll.', img: 'assets/images/Icon_Dice/Icon_Dice_4_Marbel.png', gallery: ['assets/images/Icon_Dice/Icon_Dice_4_Marbel.png'], video: null },
-        { id: 'dice-color', name: 'Color', category: 'Dice', desc: 'Vivid hues on every face. Bright, bold, and impossible to ignore on the board.', img: 'assets/images/Icon_Dice/Icon_Dice_5_Color.png', gallery: ['assets/images/Icon_Dice/Icon_Dice_5_Color.png'], video: null },
-        { id: 'dice-rainbow', name: 'Rainbow', category: 'Dice', desc: 'Prismatic shimmer shifts with the light. A spectacle that turns every roll into a show.', img: 'assets/images/Icon_Dice/Icon_Dice_6_RainBow.png', gallery: ['assets/images/Icon_Dice/Icon_Dice_6_RainBow.png'], video: null },
-        { id: 'dice-heart', name: 'Heart', category: 'Dice', desc: 'Rounded corners, heart-shaped pips. Play with affection — even your cuts feel warm.', img: 'assets/images/Icon_Dice/Icon_Dice_7_Heart.png', gallery: ['assets/images/Icon_Dice/Icon_Dice_7_Heart.png'], video: null },
-        { id: 'dice-ice', name: 'Ice', category: 'Dice', desc: 'Frost-etched crystal. Cold to the touch, sharp in the roll — winter never looked this good.', img: 'assets/images/Icon_Dice/Icon_Dice_8_ice.png', gallery: ['assets/images/Icon_Dice/Icon_Dice_8_ice.png'], video: null },
-        { id: 'dice-dragon', name: 'Dragon', category: 'Dice', desc: 'Scales etched deep, pips like embers. Legendary weight for legendary plays.', img: 'assets/images/Icon_Dice/Icon_Dice_13_dragon.png', gallery: ['assets/images/Icon_Dice/Icon_Dice_13_dragon.png'], video: null },
-        { id: 'dice-scifi', name: 'Sci-Fi', category: 'Dice', desc: 'Holographic edges, neon pips. From the year 3024 — roll the future.', img: 'assets/images/Icon_Dice/Icon_Dice_17_Scifi.png', gallery: ['assets/images/Icon_Dice/Icon_Dice_17_Scifi.png'], video: null },
+        { id: 'dice-classic', name: 'Classic', category: 'Dice', desc: 'Classic dice with a clean, balanced design for standard gameplay.', img: 'assets/images/Icon_Dice/Icon_Dice_1_Default.png', gallery: ['assets/images/Icon_Dice/Icon_Dice_1_Default.png'], video: null },
+        { id: 'dice-metal', name: 'Metal', category: 'Dice', desc: 'A sturdy dice with a sleek metallic finish.', img: 'assets/images/Icon_Dice/Icon_Dice_3_Metal.png', gallery: ['assets/images/Icon_Dice/Icon_Dice_3_Metal.png'], video: null },
+        { id: 'dice-marble', name: 'Marble', category: 'Dice', desc: 'A smooth dice with a polished marble finish.', img: 'assets/images/Icon_Dice/Icon_Dice_4_Marbel.png', gallery: ['assets/images/Icon_Dice/Icon_Dice_4_Marbel.png'], video: null },
+        { id: 'dice-color', name: 'Color', category: 'Dice', desc: 'A vibrant dice with a colorful, playful finish.', img: 'assets/images/Icon_Dice/Icon_Dice_5_Color.png', gallery: ['assets/images/Icon_Dice/Icon_Dice_5_Color.png'], video: null },
+        { id: 'dice-rainbow', name: 'Rainbow', category: 'Dice', desc: 'A item that designed for a smooth and enjoyable gameplay experience', img: 'assets/images/Icon_Dice/Icon_Dice_6_RainBow.png', gallery: ['assets/images/Icon_Dice/Icon_Dice_6_RainBow.png'], video: null },
+        { id: 'dice-heart', name: 'Heart', category: 'Dice', desc: 'A item that designed for a smooth and enjoyable gameplay experience', img: 'assets/images/Icon_Dice/Icon_Dice_7_Heart.png', gallery: ['assets/images/Icon_Dice/Icon_Dice_7_Heart.png'], video: null },
+        { id: 'dice-ice', name: 'Ice', category: 'Dice', desc: 'A item that designed for a smooth and enjoyable gameplay experience', img: 'assets/images/Icon_Dice/Icon_Dice_8_ice.png', gallery: ['assets/images/Icon_Dice/Icon_Dice_8_ice.png'], video: null },
+        { id: 'dice-dragon', name: 'Dragon', category: 'Dice', desc: 'A item that designed for a smooth and enjoyable gameplay experience', img: 'assets/images/Icon_Dice/Icon_Dice_13_dragon.png', gallery: ['assets/images/Icon_Dice/Icon_Dice_13_dragon.png'], video: null },
+        { id: 'dice-scifi', name: 'Sci-Fi', category: 'Dice', desc: 'A item that designed for a smooth and enjoyable gameplay experience', img: 'assets/images/Icon_Dice/Icon_Dice_17_Scifi.png', gallery: ['assets/images/Icon_Dice/Icon_Dice_17_Scifi.png'], video: null },
     ],
     boards: [
-        { id: 'board-classic', name: 'Classic', category: 'Board', desc: 'The original arena. Four colors, four homes, one path to victory — pure Ludo since day one.', img: 'assets/images/Icon_Board/Icon_Model_LudoBoard%200%20Default.png', gallery: ['assets/images/Icon_Board/Icon_Model_LudoBoard%200%20Default.png'], video: null },
-        { id: 'board-round', name: 'Round', category: 'Board', desc: 'Circular track, radial homes. No corners to hide in — the chase wraps around endlessly.', img: 'assets/images/Icon_Board/Icon_Model_LudoBoard%201%20Round.png', gallery: ['assets/images/Icon_Board/Icon_Model_LudoBoard%201%20Round.png'], video: null },
-        { id: 'board-ice', name: 'Ice', category: 'Board', desc: 'Frozen lake with cracking tiles. Slide across slick surfaces — momentum is everything here.', img: 'assets/images/Icon_Board/Icon_Model_LudoBoard%202%20Ice.png', gallery: ['assets/images/Icon_Board/Icon_Model_LudoBoard%202%20Ice.png'], video: null },
-        { id: 'board-wooden', name: 'Wooden', category: 'Board', desc: 'Carved oak, warm grain, brass inlays. The feel of a family heirloom, built for generations.', img: 'assets/images/Icon_Board/Icon_Model_LudoBoard%203%20Wooden.png', gallery: ['assets/images/Icon_Board/Icon_Model_LudoBoard%203%20Wooden.png'], video: null },
-        { id: 'board-metal', name: 'Metal', category: 'Board', desc: 'Industrial steel deck, glowing track lines. Cold, precise, tournament-grade.', img: 'assets/images/Icon_Board/Icon_Model_LudoBoard%204%20Metal.png', gallery: ['assets/images/Icon_Board/Icon_Model_LudoBoard%204%20Metal.png'], video: null },
-        { id: 'board-rock', name: 'Rock', category: 'Board', desc: 'Cavern floor, stalagmite obstacles. Rugged terrain where only the bold survive.', img: 'assets/images/Icon_Board/Icon_Model_LudoBoard%205%20Rock.png', gallery: ['assets/images/Icon_Board/Icon_Model_LudoBoard%205%20Rock.png'], video: null },
-        { id: 'board-scifi', name: 'Sci-Fi', category: 'Board', desc: 'Neon grid, holo-barriers, zero-G zones. The board is alive — and it changes.', img: 'assets/images/Icon_Board/Icon_Model_LudoBoard%206%20Scifi.png', gallery: ['assets/images/Icon_Board/Icon_Model_LudoBoard%206%20Scifi.png'], video: null },
-        { id: 'board-black', name: 'Black', category: 'Board', desc: 'Obsidian void, only the path glows. High contrast, high stakes — nothing to distract.', img: 'assets/images/Icon_Board/Icon_Model_LudoBoard%207%20Black.png', gallery: ['assets/images/Icon_Board/Icon_Model_LudoBoard%207%20Black.png'], video: null },
-        { id: 'board-octagon', name: 'Octagon', category: 'Board', desc: 'Eight-sided arena, diagonal runs. New angles, new strategies, same race home.', img: 'assets/images/Icon_Board/Icon_Model_LudoBoard%208%20Octagon.png', gallery: ['assets/images/Icon_Board/Icon_Model_LudoBoard%208%20Octagon.png'], video: null },
+        { id: 'board-classic', name: 'Classic', category: 'Board', desc: 'A timeless board for a familiar Ludo experience.', img: 'assets/images/Icon_Board/Icon_Model_LudoBoard%200%20Default.png', gallery: ['assets/images/Icon_Board/Icon_Model_LudoBoard%200%20Default.png'], video: null },
+        { id: 'board-round', name: 'Round', category: 'Board', desc: 'A smooth and elegant board with a unique rounded design.', img: 'assets/images/Icon_Board/Icon_Model_LudoBoard%201%20Round.png', gallery: ['assets/images/Icon_Board/Icon_Model_LudoBoard%201%20Round.png'], video: null },
+        { id: 'board-ice', name: 'Ice', category: 'Board', desc: 'A cool, icy board with a frosty and refreshing design.', img: 'assets/images/Icon_Board/Icon_Model_LudoBoard%202%20Ice.png', gallery: ['assets/images/Icon_Board/Icon_Model_LudoBoard%202%20Ice.png'], video: null },
+        { id: 'board-wooden', name: 'Wooden', category: 'Board', desc: 'A classic board crafted with a warm wooden design.', img: 'assets/images/Icon_Board/Icon_Model_LudoBoard%203%20Wooden.png', gallery: ['assets/images/Icon_Board/Icon_Model_LudoBoard%203%20Wooden.png'], video: null },
+        { id: 'board-metal', name: 'Metal', category: 'Board', desc: 'A item that designed for a smooth and enjoyable gameplay experience', img: 'assets/images/Icon_Board/Icon_Model_LudoBoard%204%20Metal.png', gallery: ['assets/images/Icon_Board/Icon_Model_LudoBoard%204%20Metal.png'], video: null },
+        { id: 'board-rock', name: 'Rock', category: 'Board', desc: 'A item that designed for a smooth and enjoyable gameplay experience', img: 'assets/images/Icon_Board/Icon_Model_LudoBoard%205%20Rock.png', gallery: ['assets/images/Icon_Board/Icon_Model_LudoBoard%205%20Rock.png'], video: null },
+        { id: 'board-scifi', name: 'Sci-Fi', category: 'Board', desc: 'A item that designed for a smooth and enjoyable gameplay experience', img: 'assets/images/Icon_Board/Icon_Model_LudoBoard%206%20Scifi.png', gallery: ['assets/images/Icon_Board/Icon_Model_LudoBoard%206%20Scifi.png'], video: null },
+        { id: 'board-black', name: 'Black', category: 'Board', desc: 'A item that designed for a smooth and enjoyable gameplay experience', img: 'assets/images/Icon_Board/Icon_Model_LudoBoard%207%20Black.png', gallery: ['assets/images/Icon_Board/Icon_Model_LudoBoard%207%20Black.png'], video: null },
+        { id: 'board-octagon', name: 'Octagon', category: 'Board', desc: 'A item that designed for a smooth and enjoyable gameplay experience', img: 'assets/images/Icon_Board/Icon_Model_LudoBoard%208%20Octagon.png', gallery: ['assets/images/Icon_Board/Icon_Model_LudoBoard%208%20Octagon.png'], video: null },
     ],
     funActions: [
-        { id: 'fun-banana', name: 'Banana', category: 'Fun Action', desc: 'Drop a peel — next token to land here slips back 3 spaces. Classic slapstick.', img: 'assets/images/TokenFunActions/Icon_TokenFunActions_Banana.png', gallery: ['assets/images/TokenFunActions/Icon_TokenFunActions_Banana.png'], video: null },
-        { id: 'fun-snowball', name: 'Snowball', category: 'Fun Action', desc: 'Freeze an opponent for one turn. They\'ll thaw... eventually.', img: 'assets/images/TokenFunActions/Icon_TokenFunActions_Snowball.png', gallery: ['assets/images/TokenFunActions/Icon_TokenFunActions_Snowball.png'], video: null },
-        { id: 'fun-heart', name: 'Heart', category: 'Fun Action', desc: 'Send a little love. Heals 1 HP if your token is damaged, or just makes them smile.', img: 'assets/images/TokenFunActions/Icon_TokenFunActions_Heart.png', gallery: ['assets/images/TokenFunActions/Icon_TokenFunActions_Heart.png'], video: null },
-        { id: 'fun-paperplane', name: 'Paper Plane', category: 'Fun Action', desc: 'Launch a message across the board. Randomly teleports a friendly token forward 1-6.', img: 'assets/images/TokenFunActions/Icon_TokenFunActions_PaperPlane.png', gallery: ['assets/images/TokenFunActions/Icon_TokenFunActions_PaperPlane.png'], video: null },
-        { id: 'fun-rose', name: 'Rose', category: 'Fun Action', desc: 'Charm an enemy — they skip their next attack action. Beauty disarms.', img: 'assets/images/TokenFunActions/Icon_TokenFunActions_Rose.png', gallery: ['assets/images/TokenFunActions/Icon_TokenFunActions_Rose.png'], video: null },
-        { id: 'fun-loveyou', name: 'Love You', category: 'Fun Action', desc: 'Blow a kiss. Both you and target gain a shield for one round. Mutual protection.', img: 'assets/images/TokenFunActions/Icon_TokenFunActions_LoveYou.png', gallery: ['assets/images/TokenFunActions/Icon_TokenFunActions_LoveYou.png'], video: null },
-        { id: 'fun-waterballoon', name: 'Water Balloon', category: 'Fun Action', desc: 'Splash! Target is soaked — movement reduced by half next turn.', img: 'assets/images/TokenFunActions/Icon_TokenFunActions_WaterBalloon.png', gallery: ['assets/images/TokenFunActions/Icon_TokenFunActions_WaterBalloon.png'], video: null },
+        { id: 'fun-banana', name: 'Banana', category: 'Fun Action', desc: 'Chuck a banana at an opponent\'s token for a goofy, yellow gag hit.', img: 'assets/images/TokenFunActions/Icon_TokenFunActions_Banana.png', gallery: ['assets/images/TokenFunActions/Icon_TokenFunActions_Banana.png'], video: null },
+        { id: 'fun-snowball', name: 'Snowball', category: 'Fun Action', desc: 'Bonk an opponent\'s token with a snowball — fluffy hit, frosty chill.', img: 'assets/images/TokenFunActions/Icon_TokenFunActions_Snowball.png', gallery: ['assets/images/TokenFunActions/Icon_TokenFunActions_Snowball.png'], video: null },
+        { id: 'fun-heart', name: 'Heart', category: 'Fun Action', desc: 'Shower an opponent\'s token in hearts — sweet, sparkly, impossible to ignore.', img: 'assets/images/TokenFunActions/Icon_TokenFunActions_Heart.png', gallery: ['assets/images/TokenFunActions/Icon_TokenFunActions_Heart.png'], video: null },
+        { id: 'fun-paperplane', name: 'Paper Plane', category: 'Fun Action', desc: 'Glide a paper plane across the board right into an opponent\'s token.', img: 'assets/images/TokenFunActions/Icon_TokenFunActions_PaperPlane.png', gallery: ['assets/images/TokenFunActions/Icon_TokenFunActions_PaperPlane.png'], video: null },
+        { id: 'fun-rose', name: 'Rose', category: 'Fun Action', desc: 'Offer a rose to an opponent\'s token — smooth, classy and a little show-off.', img: 'assets/images/TokenFunActions/Icon_TokenFunActions_Rose.png', gallery: ['assets/images/TokenFunActions/Icon_TokenFunActions_Rose.png'], video: null },
+        { id: 'fun-loveyou', name: 'Love You', category: 'Fun Action', desc: 'Send a glowing "Love U" straight to an opponent\'s token.', img: 'assets/images/TokenFunActions/Icon_TokenFunActions_LoveYou.png', gallery: ['assets/images/TokenFunActions/Icon_TokenFunActions_LoveYou.png'], video: null },
+        { id: 'fun-waterballoon', name: 'Water Balloon', category: 'Fun Action', desc: 'Toss a water balloon at an opponent\'s token for a cheerful, splashy hit.', img: 'assets/images/TokenFunActions/Icon_TokenFunActions_WaterBalloon.png', gallery: ['assets/images/TokenFunActions/Icon_TokenFunActions_WaterBalloon.png'], video: null },
         { id: 'fun-dance', name: 'Dance', category: 'Fun Action', desc: 'Break it down. All tokens in range join a conga line — move together next roll.', img: 'assets/images/TokenFunActions/Icon_TokenFunActions_Dance.png', gallery: ['assets/images/TokenFunActions/Icon_TokenFunActions_Dance.png'], video: null },
-        { id: 'fun-brokenheart', name: 'Broken Heart', category: 'Fun Action', desc: 'Shatter their morale. Target loses their next capture action. Ouch.', img: 'assets/images/TokenFunActions/Icon_TokenFunActions_BrokenHeart.png', gallery: ['assets/images/TokenFunActions/Icon_TokenFunActions_BrokenHeart.png'], video: null },
-        { id: 'fun-cake', name: 'Cake', category: 'Fun Action', desc: 'Celebrate! Everyone in range gets a bonus roll. Sugar rush for all.', img: 'assets/images/TokenFunActions/Icon_TokenFunActions_Cake.png', gallery: ['assets/images/TokenFunActions/Icon_TokenFunActions_Cake.png'], video: null },
-        { id: 'fun-dice', name: 'Dice', category: 'Fun Action', desc: 'Roll a phantom die. Result applies as bonus movement to any token you choose.', img: 'assets/images/TokenFunActions/Icon_TokenFunActions_Dice.png', gallery: ['assets/images/TokenFunActions/Icon_TokenFunActions_Dice.png'], video: null },
-        { id: 'fun-duck', name: 'Duck', category: 'Fun Action', desc: 'Quack! Dodge the next incoming capture. The ultimate pacifist move.', img: 'assets/images/TokenFunActions/Icon_TokenFunActions_Duck.png', gallery: ['assets/images/TokenFunActions/Icon_TokenFunActions_Duck.png'], video: null },
-        { id: 'fun-egg', name: 'Egg', category: 'Fun Action', desc: 'Plant an egg. Hatches in 3 turns into a random buff. Patience rewarded.', img: 'assets/images/TokenFunActions/Icon_TokenFunActions_Egg.png', gallery: ['assets/images/TokenFunActions/Icon_TokenFunActions_Egg.png'], video: null },
-        { id: 'fun-hateyou', name: 'Hate You', category: 'Fun Action', desc: 'Flip the bird. Target\'s next roll is halved (rounded down). Pure spite.', img: 'assets/images/TokenFunActions/Icon_TokenFunActions_HateYou.png', gallery: ['assets/images/TokenFunActions/Icon_TokenFunActions_HateYou.png'], video: null },
-        { id: 'fun-missyou', name: 'Miss You', category: 'Fun Action', desc: 'Send a postcard. Teleports a far-away friendly token to your side. Reunion!', img: 'assets/images/TokenFunActions/Icon_TokenFunActions_MissYou.png', gallery: ['assets/images/TokenFunActions/Icon_TokenFunActions_MissYou.png'], video: null },
-        { id: 'fun-shoe', name: 'Shoe', category: 'Fun Action', desc: 'Throw a shoe. Knocks target back 2 spaces and stuns for half a turn.', img: 'assets/images/TokenFunActions/Icon_TokenFunActions_Shoe.png', gallery: ['assets/images/TokenFunActions/Icon_TokenFunActions_Shoe.png'], video: null },
-        { id: 'fun-stone', name: 'Stone', category: 'Fun Action', desc: 'Drop a rock. Creates a temporary barrier — no passing for one full round.', img: 'assets/images/TokenFunActions/Icon_TokenFunActions_Stone.png', gallery: ['assets/images/TokenFunActions/Icon_TokenFunActions_Stone.png'], video: null },
+        { id: 'fun-brokenheart', name: 'Broken Heart', category: 'Fun Action', desc: 'Throw a cracked heart at an opponent\'s token for maximum heartbreak drama.', img: 'assets/images/TokenFunActions/Icon_TokenFunActions_BrokenHeart.png', gallery: ['assets/images/TokenFunActions/Icon_TokenFunActions_BrokenHeart.png'], video: null },
+        { id: 'fun-cake', name: 'Cake', category: 'Fun Action', desc: 'Splat a cake onto an opponent\'s token — frosting first, zero mercy.', img: 'assets/images/TokenFunActions/Icon_TokenFunActions_Cake.png', gallery: ['assets/images/TokenFunActions/Icon_TokenFunActions_Cake.png'], video: null },
+        { id: 'fun-dice', name: 'Dice', category: 'Fun Action', desc: 'Roll a lucky dice straight at an opponent\'s token and shake up the board.', img: 'assets/images/TokenFunActions/Icon_TokenFunActions_Dice.png', gallery: ['assets/images/TokenFunActions/Icon_TokenFunActions_Dice.png'], video: null },
+        { id: 'fun-duck', name: 'Duck', category: 'Fun Action', desc: 'Toss a duck at an opponent\'s token — quack attack!', img: 'assets/images/TokenFunActions/Icon_TokenFunActions_Duck.png', gallery: ['assets/images/TokenFunActions/Icon_TokenFunActions_Duck.png'], video: null },
+        { id: 'fun-egg', name: 'Egg', category: 'Fun Action', desc: 'Egg an opponent\'s token for a messy, splat-worthy hit.', img: 'assets/images/TokenFunActions/Icon_TokenFunActions_Egg.png', gallery: ['assets/images/TokenFunActions/Icon_TokenFunActions_Egg.png'], video: null },
+        { id: 'fun-hateyou', name: 'Hate You', category: 'Fun Action', desc: 'Flash a petty "Hate You" at an opponent\'s token and let them know how you feel.', img: 'assets/images/TokenFunActions/Icon_TokenFunActions_HateYou.png', gallery: ['assets/images/TokenFunActions/Icon_TokenFunActions_HateYou.png'], video: null },
+        { id: 'fun-missyou', name: 'Miss You', category: 'Fun Action', desc: 'Drift a "Miss You" note across the board to an opponent\'s token.', img: 'assets/images/TokenFunActions/Icon_TokenFunActions_MissYou.png', gallery: ['assets/images/TokenFunActions/Icon_TokenFunActions_MissYou.png'], video: null },
+        { id: 'fun-shoe', name: 'Shoe', category: 'Fun Action', desc: 'Gift an opponent\'s token a fresh pair of kicks to flex.', img: 'assets/images/TokenFunActions/Icon_TokenFunActions_Shoe.png', gallery: ['assets/images/TokenFunActions/Icon_TokenFunActions_Shoe.png'], video: null },
+        { id: 'fun-stone', name: 'Stone', category: 'Fun Action', desc: 'Pel an opponent\'s token with flying stones for a rugged, rocky hit.', img: 'assets/images/TokenFunActions/Icon_TokenFunActions_Stone.png', gallery: ['assets/images/TokenFunActions/Icon_TokenFunActions_Stone.png'], video: null },
     ],
     captureActions: [
-        { id: 'cap-fireball', name: 'Fire Ball', category: 'Capture Action', desc: 'Incinerate the target — instant capture with burn damage over 2 turns.', img: 'assets/images/TokenActions/Icon_TokenActions_Fire_Ball.png', gallery: ['assets/images/TokenActions/Icon_TokenActions_Fire_Ball.png'], video: null },
-        { id: 'cap-rockthrow', name: 'Rock Throw', category: 'Capture Action', desc: 'Heavy impact. Captures and knocks the victim back to their home base.', img: 'assets/images/TokenActions/Icon_TokenActions_Rock_Throw.png', gallery: ['assets/images/TokenActions/Icon_TokenActions_Rock_Throw.png'], video: null },
-        { id: 'cap-gunshoot', name: 'Gun Shoot', category: 'Capture Action', desc: 'Precision strike. Long-range capture — reach tokens up to 10 spaces away.', img: 'assets/images/TokenActions/Icon_TokenActions_Gun_Shoot.png', gallery: ['assets/images/TokenActions/Icon_TokenActions_Gun_Shoot.png'], video: null },
-        { id: 'cap-sword', name: 'Sword', category: 'Capture Action', desc: 'Honorable duel. Capture adjacent enemy and gain +2 to your next roll.', img: 'assets/images/TokenActions/Icon_TokenActions_Sword.png', gallery: ['assets/images/TokenActions/Icon_TokenActions_Sword.png'], video: null },
-        { id: 'cap-watersplash', name: 'Water Splash', category: 'Capture Action', desc: 'Tidal wave. Captures target and washes away their active buffs.', img: 'assets/images/TokenActions/Icon_TokenActions_Water_Splash.png', gallery: ['assets/images/TokenActions/Icon_TokenActions_Water_Splash.png'], video: null },
-        { id: 'cap-grenade', name: 'Grenade', category: 'Capture Action', desc: 'Explosive radius. Captures target + all adjacent enemies. Area denial.', img: 'assets/images/TokenActions/Icon_TokenActions_Grenade.png', gallery: ['assets/images/TokenActions/Icon_TokenActions_Grenade.png'], video: null },
-        { id: 'cap-kick', name: 'Kick', category: 'Capture Action', desc: 'Boot them out. Standard capture with a satisfying punt animation.', img: 'assets/images/TokenActions/Icon_TokenActions_Kick.png', gallery: ['assets/images/TokenActions/Icon_TokenActions_Kick.png'], video: null },
-        { id: 'cap-laser', name: 'Laser Attack', category: 'Capture Action', desc: 'Beam pierces shields. Ignores defensive buffs and captures instantly.', img: 'assets/images/TokenActions/Icon_TokenActions_Laser_Attack.png', gallery: ['assets/images/TokenActions/Icon_TokenActions_Laser_Attack.png'], video: null },
-        { id: 'cap-magicspike', name: 'Magic Spike', category: 'Capture Action', desc: 'Eldritch impalement. Captures and curses — victim rolls -1 for 3 turns.', img: 'assets/images/TokenActions/Icon_TokenActions_Magic_Spike_Attack.png', gallery: ['assets/images/TokenActions/Icon_TokenActions_Magic_Spike_Attack.png'], video: null },
-        { id: 'cap-meteor', name: 'Meteor', category: 'Capture Action', desc: 'Orbital strike. Capture with screen-shake impact. High drama, high damage.', img: 'assets/images/TokenActions/Icon_TokenActions_Meteor.png', gallery: ['assets/images/TokenActions/Icon_TokenActions_Meteor.png'], video: null },
-        { id: 'cap-punch', name: 'Punch', category: 'Capture Action', desc: 'Straight jab. Quick capture, no frills. Reliable up-close work.', img: 'assets/images/TokenActions/Icon_TokenActions_Punch.png', gallery: ['assets/images/TokenActions/Icon_TokenActions_Punch.png'], video: null },
+        { id: 'cap-fireball', name: 'Fire Ball', category: 'Capture Action', desc: 'Call down direct fire to capture an opponent. Watch it burn.', img: 'assets/images/TokenActions/Icon_TokenActions_Fire_Ball.png', gallery: ['assets/images/TokenActions/Icon_TokenActions_Fire_Ball.png'], video: null },
+        { id: 'cap-rockthrow', name: 'Rock Throw', category: 'Capture Action', desc: 'Hurl searing stone magic to smash and capture an opponent\'s token.', img: 'assets/images/TokenActions/Icon_TokenActions_Rock_Throw.png', gallery: ['assets/images/TokenActions/Icon_TokenActions_Rock_Throw.png'], video: null },
+        { id: 'cap-gunshoot', name: 'Gun Shoot', category: 'Capture Action', desc: 'Take aim and fire to pick off an opponent\'s token from a distance.', img: 'assets/images/TokenActions/Icon_TokenActions_Gun_Shoot.png', gallery: ['assets/images/TokenActions/Icon_TokenActions_Gun_Shoot.png'], video: null },
+        { id: 'cap-sword', name: 'Sword', category: 'Capture Action', desc: 'Walk in and slash with a giant blade — capture a token in one mighty swing.', img: 'assets/images/TokenActions/Icon_TokenActions_Sword.png', gallery: ['assets/images/TokenActions/Icon_TokenActions_Sword.png'], video: null },
+        { id: 'cap-watersplash', name: 'Water Splash', category: 'Capture Action', desc: 'Crash a wave of water magic over an opponent\'s token — splashed and captured.', img: 'assets/images/TokenActions/Icon_TokenActions_Water_Splash.png', gallery: ['assets/images/TokenActions/Icon_TokenActions_Water_Splash.png'], video: null },
+        { id: 'cap-grenade', name: 'Grenade', category: 'Capture Action', desc: 'Stand tall, pull the pin and lob a grenade to blow a token off the board.', img: 'assets/images/TokenActions/Icon_TokenActions_Grenade.png', gallery: ['assets/images/TokenActions/Icon_TokenActions_Grenade.png'], video: null },
+        { id: 'cap-kick', name: 'Kick', category: 'Capture Action', desc: 'Sprint in and deliver a flying kick that knocks an opponent\'s token out.', img: 'assets/images/TokenActions/Icon_TokenActions_Kick.png', gallery: ['assets/images/TokenActions/Icon_TokenActions_Kick.png'], video: null },
+        { id: 'cap-laser', name: 'Laser Attack', category: 'Capture Action', desc: 'Capture a token with a searing dark laser. Fast, precise, ruthless.', img: 'assets/images/TokenActions/Icon_TokenActions_Laser_Attack.png', gallery: ['assets/images/TokenActions/Icon_TokenActions_Laser_Attack.png'], video: null },
+        { id: 'cap-magicspike', name: 'Magic Spike', category: 'Capture Action', desc: 'Launch magic spikes from the ground to skewer and capture an opponent\'s token.', img: 'assets/images/TokenActions/Icon_TokenActions_Magic_Spike_Attack.png', gallery: ['assets/images/TokenActions/Icon_TokenActions_Magic_Spike_Attack.png'], video: null },
+        { id: 'cap-meteor', name: 'Meteor', category: 'Capture Action', desc: 'Call a meteor from the skies to crush and capture an opponent\'s token.', img: 'assets/images/TokenActions/Icon_TokenActions_Meteor.png', gallery: ['assets/images/TokenActions/Icon_TokenActions_Meteor.png'], video: null },
+        { id: 'cap-punch', name: 'Punch', category: 'Capture Action', desc: 'Close the gap and land a solid punch to capture an opponent\'s token.', img: 'assets/images/TokenActions/Icon_TokenActions_Punch.png', gallery: ['assets/images/TokenActions/Icon_TokenActions_Punch.png'], video: null },
         { id: 'cap-spiralrock', name: 'Spiral Rock', category: 'Capture Action', desc: 'Drilling projectile. Captures through walls and barriers. No cover saves them.', img: 'assets/images/TokenActions/Icon_TokenActions_Spiral_Rock_Attack.png', gallery: ['assets/images/TokenActions/Icon_TokenActions_Spiral_Rock_Attack.png'], video: null },
-        { id: 'cap-thunder', name: 'Thunder', category: 'Capture Action', desc: 'Lightning arc. Captures target and chains to one nearby enemy. Zap zap.', img: 'assets/images/TokenActions/Icon_TokenActions_Thunder_Lightning.png', gallery: ['assets/images/TokenActions/Icon_TokenActions_Thunder_Lightning.png'], video: null },
-        { id: 'cap-waterswim', name: 'Water Swim', category: 'Capture Action', desc: 'Drown the chase. Captures and drags victim to nearest water tile.', img: 'assets/images/TokenActions/Icon_TokenActions_Water_Swim.png', gallery: ['assets/images/TokenActions/Icon_TokenActions_Water_Swim.png'], video: null },
-        { id: 'cap-windsplash', name: 'Wind Splash', category: 'Capture Action', desc: 'Gust blast. Captures and blows all tokens in a 3-radius back 2 spaces.', img: 'assets/images/TokenActions/Icon_TokenActions_Wind_Splash.png', gallery: ['assets/images/TokenActions/Icon_TokenActions_Wind_Splash.png'], video: null },
+        { id: 'cap-thunder', name: 'Thunder', category: 'Capture Action', desc: 'Strike from the clouds with a bolt of lightning to capture an opponent\'s token.', img: 'assets/images/TokenActions/Icon_TokenActions_Thunder_Lightning.png', gallery: ['assets/images/TokenActions/Icon_TokenActions_Thunder_Lightning.png'], video: null },
+        { id: 'cap-waterswim', name: 'Water Swim', category: 'Capture Action', desc: 'Swim, stalk and strike — capture a token with a slippery surprise attack.', img: 'assets/images/TokenActions/Icon_TokenActions_Water_Swim.png', gallery: ['assets/images/TokenActions/Icon_TokenActions_Water_Swim.png'], video: null },
+        { id: 'cap-windsplash', name: 'Wind Splash', category: 'Capture Action', desc: 'Whisk an opponent\'s token away with a slicing gust of wind magic.', img: 'assets/images/TokenActions/Icon_TokenActions_Wind_Splash.png', gallery: ['assets/images/TokenActions/Icon_TokenActions_Wind_Splash.png'], video: null },
     ],
     environments: [
-        { id: 'env-classic', name: 'Classic', category: 'Environment', desc: 'The original tabletop. Warm wood, soft felt, familiar dice cup — home turf.', img: 'assets/images/Icon_Environment/Icon_Model_Environment%20C1%20Default.png', gallery: ['assets/images/Icon_Environment/Icon_Model_Environment%20C1%20Default.png'], video: null },
-        { id: 'env-city', name: 'City', category: 'Environment', desc: 'Rooftop showdown. Neon skyline, distant traffic, rain-slick tiles. Urban legends play here.', img: 'assets/images/Icon_Environment/Icon_Model_Environment%20C2%20City.png', gallery: ['assets/images/Icon_Environment/Icon_Model_Environment%20C2%20City.png'], video: null },
-        { id: 'env-kidsroom', name: 'Kids Room', category: 'Environment', desc: 'Carpet battlefield. Toy blocks as obstacles, crayon-drawn paths. Nostalgia mode.', img: 'assets/images/Icon_Environment/Icon_Model_Environment%20C3%20Kids%20Room.png', gallery: ['assets/images/Icon_Environment/Icon_Model_Environment%20C3%20Kids%20Room.png'], video: null },
-        { id: 'env-castle', name: 'Castle', category: 'Environment', desc: 'Stone hall, torchlight, banner-draped walls. Play like royalty in the great hall.', img: 'assets/images/Icon_Environment/Icon_Model_Environment%20C4%20Castle.png', gallery: ['assets/images/Icon_Environment/Icon_Model_Environment%20C4%20Castle.png'], video: null },
-        { id: 'env-christmas', name: 'Christmas', category: 'Environment', desc: 'Snow-globe village. Twinkling lights, gift-box homes, Santa watches the rolls.', img: 'assets/images/Icon_Environment/Icon_Model_Environment%20L1%20christmas.png', gallery: ['assets/images/Icon_Environment/Icon_Model_Environment%20L1%20christmas.png'], video: null },
-        { id: 'env-dragon', name: 'Dragon Lair', category: 'Environment', desc: 'Molten cavern, gold piles, the wyrm stirs. High heat, high stakes.', img: 'assets/images/Icon_Environment/Icon_Model_Environment%20L2%20Dragon.png', gallery: ['assets/images/Icon_Environment/Icon_Model_Environment%20L2%20Dragon.png'], video: null },
-        { id: 'env-soccer', name: 'Soccer Field', category: 'Environment', desc: 'Pitch-perfect. Grass tiles, goal-post homes, referee whistle on capture.', img: 'assets/images/Icon_Environment/Icon_Model_Environment%20R1%20soccer%20field.png', gallery: ['assets/images/Icon_Environment/Icon_Model_Environment%20R1%20soccer%20field.png'], video: null },
-        { id: 'env-island', name: 'Island', category: 'Environment', desc: 'Tropical paradise. Sand paths, tide-pool homes, coconut dice. Vacation vibes.', img: 'assets/images/Icon_Environment/Icon_Model_Environment%20R2%20Island.png', gallery: ['assets/images/Icon_Environment/Icon_Model_Environment%20R2%20Island.png'], video: null },
-        { id: 'env-magical', name: 'Magical', category: 'Environment', desc: 'Floating isles, mana currents, runes glow underfoot. Magic changes the rules.', img: 'assets/images/Icon_Environment/Icon_Model_Environment%20R3%20Magical.png', gallery: ['assets/images/Icon_Environment/Icon_Model_Environment%20R3%20Magical.png'], video: null },
+        { id: 'env-classic', name: 'Classic', category: 'Environment', desc: 'A simple and balanced environment for classic gameplay.', img: 'assets/images/Icon_Environment/Icon_Model_Environment%20C1%20Default.png', gallery: ['assets/images/Icon_Environment/Icon_Model_Environment%20C1%20Default.png'], video: null },
+        { id: 'env-city', name: 'City', category: 'Environment', desc: 'A lively urban environment filled with a vibrant city atmosphere.', img: 'assets/images/Icon_Environment/Icon_Model_Environment%20C2%20City.png', gallery: ['assets/images/Icon_Environment/Icon_Model_Environment%20C2%20City.png'], video: null },
+        { id: 'env-kidsroom', name: 'Kids Room', category: 'Environment', desc: 'A cozy indoor environment with a warm and relaxing atmosphere.', img: 'assets/images/Icon_Environment/Icon_Model_Environment%20C3%20Kids%20Room.png', gallery: ['assets/images/Icon_Environment/Icon_Model_Environment%20C3%20Kids%20Room.png'], video: null },
+        { id: 'env-castle', name: 'Castle', category: 'Environment', desc: 'Play your Ludo matches in a grand castle setting.', img: 'assets/images/Icon_Environment/Icon_Model_Environment%20C4%20Castle.png', gallery: ['assets/images/Icon_Environment/Icon_Model_Environment%20C4%20Castle.png'], video: null },
+        { id: 'env-christmas', name: 'Christmas', category: 'Environment', desc: 'Celebrate the season with a festive Christmas setting for your Ludo match.', img: 'assets/images/Icon_Environment/Icon_Model_Environment%20L1%20christmas.png', gallery: ['assets/images/Icon_Environment/Icon_Model_Environment%20L1%20christmas.png'], video: null },
+        { id: 'env-dragon', name: 'Dragon Lair', category: 'Environment', desc: 'A dragon-themed dice that brings a fierce touch to every roll.', img: 'assets/images/Icon_Environment/Icon_Model_Environment%20L2%20Dragon.png', gallery: ['assets/images/Icon_Environment/Icon_Model_Environment%20L2%20Dragon.png'], video: null },
+        { id: 'env-soccer', name: 'Soccer Field', category: 'Environment', desc: 'Take your Ludo match to the soccer field for a sporty setting.', img: 'assets/images/Icon_Environment/Icon_Model_Environment%20R1%20soccer%20field.png', gallery: ['assets/images/Icon_Environment/Icon_Model_Environment%20R1%20soccer%20field.png'], video: null },
+        { id: 'env-island', name: 'Island', category: 'Environment', desc: 'Enjoy your Ludo match in a relaxing island setting.', img: 'assets/images/Icon_Environment/Icon_Model_Environment%20R2%20Island.png', gallery: ['assets/images/Icon_Environment/Icon_Model_Environment%20R2%20Island.png'], video: null },
+        { id: 'env-magical', name: 'Magical', category: 'Environment', desc: 'Bring a touch of wonder to your match in this magical setting.', img: 'assets/images/Icon_Environment/Icon_Model_Environment%20R3%20Magical.png', gallery: ['assets/images/Icon_Environment/Icon_Model_Environment%20R3%20Magical.png'], video: null },
     ],
 };
 
@@ -263,31 +263,16 @@ function renderModal() {
     modalCounter.textContent = `${currentIndex + 1} / ${items.length}`;
 
     // Media
+    modalVideo.pause();
     modalImage.src = item.img;
     modalImage.alt = item.name;
     modalImage.style.display = 'block';
     modalVideo.style.display = 'none';
 
-    // Remove any existing placeholder
-    const existingPlaceholder = modalMedia.querySelector('.modal-video-placeholder');
-    if (existingPlaceholder) existingPlaceholder.remove();
-
     if (item.video) {
         modalVideo.src = item.video;
         modalVideo.style.display = 'block';
         modalImage.style.display = 'none';
-    } else {
-        // Show portrait video placeholder for mobile
-        const placeholder = document.createElement('div');
-        placeholder.className = 'modal-video-placeholder';
-        placeholder.innerHTML = `
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <rect x="2" y="2" width="20" height="20" rx="2"/>
-                <polygon points="10 8 16 12 10 16"/>
-            </svg>
-            <span>Portrait video preview<br><small>Add video URL to item data</small></span>
-        `;
-        modalMedia.appendChild(placeholder);
     }
 
     // Meta tags
@@ -299,7 +284,7 @@ function renderModal() {
     // Gallery thumbnails - use item.gallery if available, otherwise fall back to all items
     const galleryImages = item.gallery && item.gallery.length > 0 ? item.gallery : items.map(it => it.img);
     modalGallery.innerHTML = galleryImages.map((imgSrc, i) => `
-        <div class="modal-gallery-item ${i === 0 ? 'active' : ''}" data-index="${i}" style="background-image: url('${imgSrc}')">
+        <div class="modal-gallery-item ${i === 0 ? 'active' : ''}" data-index="${i}">
             <img src="${imgSrc}" alt="${item.name} preview ${i + 1}">
         </div>
     `).join('');
@@ -310,6 +295,9 @@ function renderModal() {
             // For now, just update the main image
             const idx = parseInt(el.dataset.index);
             const imgSrc = galleryImages[idx];
+            modalVideo.pause();
+            modalVideo.style.display = 'none';
+            modalImage.style.display = 'block';
             modalImage.src = imgSrc;
             modalGallery.querySelectorAll('.modal-gallery-item').forEach((g, gi) => {
                 g.classList.toggle('active', gi === idx);
@@ -379,22 +367,110 @@ if (document.readyState === 'loading') {
     attachModalTriggers();
 }
 
+// ---------- Full-view screenshots ----------
+const screenshotViewer = document.getElementById('screenshotViewer');
+const screenshotFull = document.getElementById('screenshotFull');
+const screenshotClose = document.getElementById('screenshotClose');
+let screenshotTrigger = null;
+let screenshotPreviousOverflow = '';
+
+document.querySelectorAll('#parade .shot').forEach(shot => {
+    const image = shot.querySelector('img');
+    shot.setAttribute('role', 'button');
+    shot.setAttribute('tabindex', '0');
+    shot.setAttribute('aria-label', `View full screenshot: ${image.alt}`);
+    shot.setAttribute('aria-haspopup', 'dialog');
+
+    const openScreenshot = () => {
+        if (screenshotViewer.open) return;
+        screenshotTrigger = shot;
+        screenshotPreviousOverflow = document.body.style.overflow;
+        screenshotFull.src = image.currentSrc || image.src;
+        screenshotFull.alt = image.alt;
+        screenshotViewer.showModal();
+        document.body.style.overflow = 'hidden';
+        screenshotClose.focus();
+    };
+
+    shot.addEventListener('click', openScreenshot);
+    shot.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            openScreenshot();
+        }
+    });
+});
+
+screenshotClose.addEventListener('click', () => screenshotViewer.close());
+screenshotViewer.addEventListener('click', e => {
+    if (e.target === screenshotViewer) screenshotViewer.close();
+});
+// Native dialog handles Escape and keeps keyboard focus inside the viewer.
+screenshotViewer.addEventListener('close', () => {
+    document.body.style.overflow = screenshotPreviousOverflow;
+    screenshotFull.removeAttribute('src');
+    if (screenshotTrigger) screenshotTrigger.focus({ preventScroll: true });
+});
+
 // ---------- Feedback form ----------
 const feedbackForm = document.getElementById('feedbackForm');
 const feedbackStatus = document.getElementById('feedbackStatus');
 
-feedbackForm.addEventListener('submit', (e) => {
+const feedbackEndpoint = 'https://docs.google.com/forms/d/e/1FAIpQLSexoyGQKwguZXJxcejHz3oEAtuQnNhnVnIg3Lw61jmpKjkdUQ/formResponse';
+// These entry IDs belong to the published form; update them if questions are recreated.
+const feedbackFields = {
+    name: 'entry.1568226805',
+    email: 'entry.27432634',
+    subject: 'entry.1897350469',
+    message: 'entry.1844792717',
+};
+let feedbackSubmitting = false;
+
+feedbackForm.addEventListener('submit', async (e) => {
     e.preventDefault();
+    if (feedbackSubmitting || !feedbackForm.reportValidity()) return;
     const formData = new FormData(feedbackForm);
-    const data = Object.fromEntries(formData.entries());
+    const body = new URLSearchParams();
+    for (const [name, entry] of Object.entries(feedbackFields)) {
+        const value = String(formData.get(name) || '').trim();
+        if (!value) {
+            feedbackStatus.textContent = 'Please complete every field before sending.';
+            feedbackForm.elements.namedItem(name).focus();
+            return;
+        }
+        body.set(entry, value);
+    }
 
-    const subject = encodeURIComponent(`Ludo Ultra 3D Feedback: ${data.subject}`);
-    const body = encodeURIComponent(
-        `From: ${data.name} <${data.email}>\n\n${data.message}`
-    );
+    const button = feedbackForm.querySelector('button[type="submit"]');
+    const originalLabel = button.textContent;
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 20000);
+    feedbackSubmitting = true;
+    button.disabled = true;
+    button.textContent = 'Sending...';
+    feedbackForm.setAttribute('aria-busy', 'true');
+    feedbackStatus.textContent = 'Sending your feedback to Google Forms...';
 
-    feedbackStatus.textContent = 'Opening your mail app...';
-    feedbackStatus.className = 'ok';
-
-    window.location.href = `mailto:contact@ultraaim.in?subject=${subject}&body=${body}`;
+    try {
+        // Google Forms does not expose a readable cross-origin response.
+        // An opaque response is NOT proof that Google accepted the submission.
+        await fetch(feedbackEndpoint, {
+            method: 'POST',
+            mode: 'no-cors',
+            credentials: 'omit',
+            body,
+            signal: controller.signal,
+        });
+        feedbackStatus.textContent = 'Submission request sent to Google Forms. This page cannot confirm it was saved. Your text has been kept; use the direct form link below if you need confirmation.';
+    } catch (error) {
+        feedbackStatus.textContent = error.name === 'AbortError'
+            ? 'The request timed out; delivery is unknown. Your text is still here. Check your connection or use the Google Form below.'
+            : 'Could not confirm delivery. Your text is still here. Check your connection or use the Google Form below.';
+    } finally {
+        clearTimeout(timeout);
+        feedbackSubmitting = false;
+        button.disabled = false;
+        button.textContent = originalLabel;
+        feedbackForm.removeAttribute('aria-busy');
+    }
 });

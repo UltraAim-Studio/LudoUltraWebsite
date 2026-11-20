@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Request deletion of your Ludo Ultra account.">
+    <meta name="theme-color" content="#0a1638">
+    <title>Delete My Ludo Ultra Account</title>
+    <link rel="icon" type="image/png" href="assets/images/Ludo%20Ultra%20App%20Icon%20512.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="account-deletion-page">
+    <main class="container deletion-container">
+        <header class="deletion-header">
+            <img src="assets/images/Ludo%20Ultra%20App%20Icon%20512.png" width="88" height="88" alt="Ludo Ultra 3D">
+            <p class="deletion-eyebrow">ACCOUNT SUPPORT</p>
+            <h1>Delete My <span>Ludo Ultra</span> Account</h1>
+            <p>We're sorry to see you go. Share your account details and choose when you would like your account deleted.</p>
+        </header>
+
+        <section class="deletion-panel" aria-labelledby="deletionFormTitle">
+            <h2 id="deletionFormTitle">Account deletion request</h2>
+            <p class="deletion-help">All fields marked * are required, including feedback.</p>
+            <div class="deletion-notice" id="deletionNotice">
+                <strong>Submit an account deletion request</strong>
+                <p>Your details will be sent to Google Forms for review. Submitting this form does not automatically delete your account or schedule deletion.</p>
+            </div>
+
+            <form class="feedback-form deletion-form" id="deletionForm" aria-describedby="deletionNotice">
+                <div class="form-row">
+                    <div class="deletion-field">
+                        <label for="deletionEmail">Email *</label>
+                        <input id="deletionEmail" name="email" type="email" autocomplete="email" placeholder="you@example.com" aria-describedby="emailHelp" required>
+                        <small id="emailHelp">Enter the email associated with your game account.</small>
+                    </div>
+                    <div class="deletion-field">
+                        <label for="gameUserId">Game User ID *</label>
+                        <input id="gameUserId" name="gameUserId" type="text" autocomplete="off" spellcheck="false" placeholder="Enter your Game User ID" required>
+                    </div>
+                </div>
+
+                <div class="deletion-field">
+                    <label for="deletionReason">Reason for deletion *</label>
+                    <select id="deletionReason" name="reason" required>
+                        <option value="" disabled selected>Select a reason</option>
+                        <option>I no longer play the game</option>
+                        <option>I want to reduce my gaming time</option>
+                        <option>I have privacy or data concerns</option>
+                        <option>I experienced technical issues or bugs</option>
+                        <option>I am not satisfied with the gameplay</option>
+                        <option>I had a negative multiplayer experience</option>
+                        <option>I have a duplicate or unused account</option>
+                        <option>I want to start fresh</option>
+                        <option value="other">Other — write your own reason</option>
+                        <option>Prefer not to say</option>
+                    </select>
+                </div>
+
+                <div class="deletion-field">
+                    <label for="deletionFeedback">Feedback Message *</label>
+                    <textarea id="deletionFeedback" name="feedback" rows="5" maxlength="5000" placeholder="Tell us what we could improve..." aria-describedby="feedbackHelp" required></textarea>
+                    <small id="feedbackHelp">Please do not include passwords, payment details, or other sensitive information.</small>
+                </div>
+
+                <div class="deletion-field" id="customReasonField" hidden>
+                    <label for="customReason">Your reason *</label>
+                    <textarea id="customReason" name="customReason" rows="3" maxlength="2000" placeholder="Tell us your reason for deletion" disabled></textarea>
+                </div>
+
+                <fieldset class="deletion-timing">
+                    <legend>Deletion time selection *</legend>
+                    <p class="deletion-help" id="timingHelp">Choose your preferred timing. This selection is not a guarantee of processing time.</p>
+                    <div class="deletion-options">
+                        <label class="deletion-option">
+                            <input type="radio" name="deletionTiming" value="immediately" aria-describedby="timingHelp immediatelyHelp" required>
+                            <span><strong>Immediately</strong><span id="immediatelyHelp">Request deletion as soon as your request has been reviewed and your account verified, without an intentional 30-day waiting period.</span></span>
+                        </label>
+                        <label class="deletion-option">
+                            <input type="radio" name="deletionTiming" value="after-30-days" aria-describedby="timingHelp thirtyDaysHelp" required>
+                            <span><strong>After 30 days</strong><span id="thirtyDaysHelp">Request a 30-day waiting period from submission before deletion is processed. This gives you extra time before your requested deletion date.</span></span>
+                        </label>
+                    </div>
+                </fieldset>
+
+                <p class="deletion-help">Review your email and Game User ID carefully so the request identifies the correct account.</p>
+                <button class="dice-btn" type="submit" aria-describedby="deletionCooldown" disabled>Submit deletion request</button>
+                <p class="deletion-help" id="deletionCooldown"></p>
+                <p class="deletion-help" id="deletionStatus" role="status" aria-live="polite"></p>
+                <p class="deletion-help">For confirmation directly from Google, <a href="https://docs.google.com/forms/d/e/1FAIpQLSffWVVOygSy-FsRCO3yV0xfUbNnQyt8HEnCUaLh7qdrIJ4buQ/viewform" target="_blank" rel="noopener noreferrer">open the Google Form</a>.</p>
+                <noscript><p class="deletion-help">Enable JavaScript to submit here, or use the Google Form link above.</p></noscript>
+            </form>
+        </section>
+        <footer class="deletion-footer">Ludo Ultra 3D · Account Support</footer>
+    </main>
+    <script src="delete-account.js"></script>
+</body>
+</html>

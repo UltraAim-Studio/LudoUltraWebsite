@@ -1,0 +1,295 @@
+{
+  "updated": 57,
+  "unchanged": [
+    "fun-dance",
+    "cap-spiralrock"
+  ],
+  "checks": "JavaScript parses; all mapped descriptions match; all other code and item fields unchanged.",
+  "items": [
+    {
+      "website": "dice-classic",
+      "source": "Dice\\ShopItem - Dice 1.asset",
+      "description": "Classic dice with a clean, balanced design for standard gameplay."
+    },
+    {
+      "website": "dice-metal",
+      "source": "Dice\\ShopItem - Dice 2.asset",
+      "description": "A sturdy dice with a sleek metallic finish."
+    },
+    {
+      "website": "dice-marble",
+      "source": "Dice\\ShopItem - Dice 3.asset",
+      "description": "A smooth dice with a polished marble finish."
+    },
+    {
+      "website": "dice-color",
+      "source": "Dice\\ShopItem - Dice 4.asset",
+      "description": "A vibrant dice with a colorful, playful finish."
+    },
+    {
+      "website": "dice-rainbow",
+      "source": "Dice\\ShopItem - Dice 5.asset",
+      "description": "A item that designed for a smooth and enjoyable gameplay experience"
+    },
+    {
+      "website": "dice-heart",
+      "source": "Dice\\ShopItem - Dice 6.asset",
+      "description": "A item that designed for a smooth and enjoyable gameplay experience"
+    },
+    {
+      "website": "dice-ice",
+      "source": "Dice\\ShopItem - Dice 7.asset",
+      "description": "A item that designed for a smooth and enjoyable gameplay experience"
+    },
+    {
+      "website": "dice-dragon",
+      "source": "Dice\\ShopItem - Dice 8.asset",
+      "description": "A item that designed for a smooth and enjoyable gameplay experience"
+    },
+    {
+      "website": "dice-scifi",
+      "source": "Dice\\ShopItem - Dice 9.asset",
+      "description": "A item that designed for a smooth and enjoyable gameplay experience"
+    },
+    {
+      "website": "board-classic",
+      "source": "Board\\ShopItem - Board 1.asset",
+      "description": "A timeless board for a familiar Ludo experience."
+    },
+    {
+      "website": "board-round",
+      "source": "Board\\ShopItem - Board 2.asset",
+      "description": "A smooth and elegant board with a unique rounded design."
+    },
+    {
+      "website": "board-ice",
+      "source": "Board\\ShopItem - Board 3.asset",
+      "description": "A cool, icy board with a frosty and refreshing design."
+    },
+    {
+      "website": "board-wooden",
+      "source": "Board\\ShopItem - Board 4.asset",
+      "description": "A classic board crafted with a warm wooden design."
+    },
+    {
+      "website": "board-metal",
+      "source": "Board\\ShopItem - Board 5.asset",
+      "description": "A item that designed for a smooth and enjoyable gameplay experience"
+    },
+    {
+      "website": "board-rock",
+      "source": "Board\\ShopItem - Board 6.asset",
+      "description": "A item that designed for a smooth and enjoyable gameplay experience"
+    },
+    {
+      "website": "board-scifi",
+      "source": "Board\\ShopItem - Board 7.asset",
+      "description": "A item that designed for a smooth and enjoyable gameplay experience"
+    },
+    {
+      "website": "board-black",
+      "source": "Board\\ShopItem - Board 8.asset",
+      "description": "A item that designed for a smooth and enjoyable gameplay experience"
+    },
+    {
+      "website": "board-octagon",
+      "source": "Board\\ShopItem - Board 9.asset",
+      "description": "A item that designed for a smooth and enjoyable gameplay experience"
+    },
+    {
+      "website": "fun-banana",
+      "source": "PlayerActions\\ShopItem - BananafunAction.asset",
+      "description": "Chuck a banana at an opponent's token for a goofy, yellow gag hit."
+    },
+    {
+      "website": "fun-snowball",
+      "source": "PlayerActions\\ShopItem - SnowBallFunAction.asset",
+      "description": "Bonk an opponent's token with a snowball — fluffy hit, frosty chill."
+    },
+    {
+      "website": "fun-heart",
+      "source": "PlayerActions\\ShopItem - HeartFunAction.asset",
+      "description": "Shower an opponent's token in hearts — sweet, sparkly, impossible to ignore."
+    },
+    {
+      "website": "fun-paperplane",
+      "source": "PlayerActions\\ShopItem - planeFunAction.asset",
+      "description": "Glide a paper plane across the board right into an opponent's token."
+    },
+    {
+      "website": "fun-rose",
+      "source": "PlayerActions\\ShopItem - RoseFunAction.asset",
+      "description": "Offer a rose to an opponent's token — smooth, classy and a little show-off."
+    },
+    {
+      "website": "fun-loveyou",
+      "source": "PlayerActions\\ShopItem - ILoveUFunAction.asset",
+      "description": "Send a glowing \"Love U\" straight to an opponent's token."
+    },
+    {
+      "website": "fun-waterballoon",
+      "source": "PlayerActions\\ShopItem - BallonFunAction.asset",
+      "description": "Toss a water balloon at an opponent's token for a cheerful, splashy hit."
+    },
+    {
+      "website": "fun-brokenheart",
+      "source": "PlayerActions\\ShopItem - BrokenHeartFunAction.asset",
+      "description": "Throw a cracked heart at an opponent's token for maximum heartbreak drama."
+    },
+    {
+      "website": "fun-cake",
+      "source": "PlayerActions\\ShopItem - CakeFunAction.asset",
+      "description": "Splat a cake onto an opponent's token — frosting first, zero mercy."
+    },
+    {
+      "website": "fun-dice",
+      "source": "PlayerActions\\ShopItem - DiceFunAction.asset",
+      "description": "Roll a lucky dice straight at an opponent's token and shake up the board."
+    },
+    {
+      "website": "fun-duck",
+      "source": "PlayerActions\\ShopItem - DuckFunAction.asset",
+      "description": "Toss a duck at an opponent's token — quack attack!"
+    },
+    {
+      "website": "fun-egg",
+      "source": "PlayerActions\\ShopItem - EggFunAction.asset",
+      "description": "Egg an opponent's token for a messy, splat-worthy hit."
+    },
+    {
+      "website": "fun-hateyou",
+      "source": "PlayerActions\\ShopItem - IHateUFunAction.asset",
+      "description": "Flash a petty \"Hate You\" at an opponent's token and let them know how you feel."
+    },
+    {
+      "website": "fun-missyou",
+      "source": "PlayerActions\\ShopItem - IMissUFunAction.asset",
+      "description": "Drift a \"Miss You\" note across the board to an opponent's token."
+    },
+    {
+      "website": "fun-shoe",
+      "source": "PlayerActions\\ShopItem - ShoesFunAction.asset",
+      "description": "Gift an opponent's token a fresh pair of kicks to flex."
+    },
+    {
+      "website": "fun-stone",
+      "source": "PlayerActions\\ShopItem - StoneThrowFunAction.asset",
+      "description": "Pel an opponent's token with flying stones for a rugged, rocky hit."
+    },
+    {
+      "website": "cap-fireball",
+      "source": "PlayerActions\\ShopItem - DirectFireMagic.asset",
+      "description": "Call down direct fire to capture an opponent. Watch it burn."
+    },
+    {
+      "website": "cap-rockthrow",
+      "source": "PlayerActions\\ShopItem - DirectStoneMagic.asset",
+      "description": "Hurl searing stone magic to smash and capture an opponent's token."
+    },
+    {
+      "website": "cap-gunshoot",
+      "source": "PlayerActions\\ShopItem - standFireToken.asset",
+      "description": "Take aim and fire to pick off an opponent's token from a distance."
+    },
+    {
+      "website": "cap-sword",
+      "source": "PlayerActions\\ShopItem - 2HandSlashWalkAndKillToken.asset",
+      "description": "Walk in and slash with a giant blade — capture a token in one mighty swing."
+    },
+    {
+      "website": "cap-watersplash",
+      "source": "PlayerActions\\ShopItem - DirectWaterMagic.asset",
+      "description": "Crash a wave of water magic over an opponent's token — splashed and captured."
+    },
+    {
+      "website": "cap-grenade",
+      "source": "PlayerActions\\ShopItem - standAndThrow.asset",
+      "description": "Stand tall, pull the pin and lob a grenade to blow a token off the board."
+    },
+    {
+      "website": "cap-kick",
+      "source": "PlayerActions\\ShopItem - RunAndKickCutAction.asset",
+      "description": "Sprint in and deliver a flying kick that knocks an opponent's token out."
+    },
+    {
+      "website": "cap-laser",
+      "source": "PlayerActions\\ShopItem - LaserCutAction.asset",
+      "description": "Capture a token with a searing dark laser. Fast, precise, ruthless."
+    },
+    {
+      "website": "cap-magicspike",
+      "source": "PlayerActions\\ShopItem - FrontSpikeCutAction.asset",
+      "description": "Launch magic spikes from the ground to skewer and capture an opponent's token."
+    },
+    {
+      "website": "cap-meteor",
+      "source": "PlayerActions\\ShopItem - MeteorCutAction.asset",
+      "description": "Call a meteor from the skies to crush and capture an opponent's token."
+    },
+    {
+      "website": "cap-punch",
+      "source": "PlayerActions\\ShopItem - WalkAndPunchAction.asset",
+      "description": "Close the gap and land a solid punch to capture an opponent's token."
+    },
+    {
+      "website": "cap-thunder",
+      "source": "PlayerActions\\ShopItem - CloudLightningCutAction.asset",
+      "description": "Strike from the clouds with a bolt of lightning to capture an opponent's token."
+    },
+    {
+      "website": "cap-waterswim",
+      "source": "PlayerActions\\ShopItem - swimWalkAndKillToken.asset",
+      "description": "Swim, stalk and strike — capture a token with a slippery surprise attack."
+    },
+    {
+      "website": "cap-windsplash",
+      "source": "PlayerActions\\ShopItem - DirectWindMagic.asset",
+      "description": "Whisk an opponent's token away with a slicing gust of wind magic."
+    },
+    {
+      "website": "env-classic",
+      "source": "Environment\\ShopItem - Environment 1.asset",
+      "description": "A simple and balanced environment for classic gameplay."
+    },
+    {
+      "website": "env-city",
+      "source": "Environment\\ShopItem - Environment 2.asset",
+      "description": "A lively urban environment filled with a vibrant city atmosphere."
+    },
+    {
+      "website": "env-kidsroom",
+      "source": "Environment\\ShopItem - Environment 3.asset",
+      "description": "A cozy indoor environment with a warm and relaxing atmosphere."
+    },
+    {
+      "website": "env-castle",
+      "source": "Environment\\ShopItem - Environment 4.asset",
+      "description": "Play your Ludo matches in a grand castle setting."
+    },
+    {
+      "website": "env-christmas",
+      "source": "Environment\\ShopItem - Environment 8.asset",
+      "description": "Celebrate the season with a festive Christmas setting for your Ludo match."
+    },
+    {
+      "website": "env-dragon",
+      "source": "Environment\\ShopItem - Environment 9.asset",
+      "description": "A dragon-themed dice that brings a fierce touch to every roll."
+    },
+    {
+      "website": "env-soccer",
+      "source": "Environment\\ShopItem - Environment 5.asset",
+      "description": "Take your Ludo match to the soccer field for a sporty setting."
+    },
+    {
+      "website": "env-island",
+      "source": "Environment\\ShopItem - Environment 6.asset",
+      "description": "Enjoy your Ludo match in a relaxing island setting."
+    },
+    {
+      "website": "env-magical",
+      "source": "Environment\\ShopItem - Environment 7.asset",
+      "description": "Bring a touch of wonder to your match in this magical setting."
+    }
+  ]
+}
